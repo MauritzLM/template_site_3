@@ -10,7 +10,212 @@ layout: layouts/base.html
 stylesheet: css/home.css 
 ---
 
-{# page html #}
-<h1>{{ title }}</h1>
+{# Hero section #}
+
+<section id="hero">
+
+   <div class="container">
+     {# add hero image #}
+     
+      <h1>{{ title }}</h1>
+      <p>Lorem ipsum dolor sit amet, labore et dolore magna aliqua.</p>
+      <a class="cs-button">Get Started</a>
+
+   </div>   
+
+</section>
+
+{# Services section #}
+
+<section id="services">
+     <div class="container">
+
+        <div class="service-card">
+           {# add img #}
+           <h3>Service</h3>
+           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+        </div>
+
+        <div class="service-card">
+           {# add img #}
+           <h3>Service</h3>
+           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+        </div>
+
+        <div class="service-card">
+           {# add img #}
+           <h3>Service</h3>
+           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+        </div>
+
+     </div>
+</section>
+
+{# About section #}
+
+<section id="about">
+
+ <div class="container">
+
+  <img src="" alt ="">
+
+  <div class="cs-text"> 
+     <h2>About</h2>
+     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do mod tempor incididunt ut labore et dolore magna aliqua.</p>
+     <a class="cs-button">Meet our team</a>
+  </div>
+
+ </div> 
+
+</section>
+
+{# Why choose us #}
+
+<section id="sbs">
+
+   <div class="container">
+
+      <div class="cs-text">
+          <h2>Heading</h2>
+          <p>Augue ut lectus arcu bibendum at varius. Suscipit tellus mauris a diam maecenas sed enim ut.</p>
+      </div>
+
+      <div class="info-container">
+
+         <div class="info-detail">
+           <img src="" alt="">
+           <h3>Info</h3>
+           <p>Detail</p>
+         </div>
+
+         <div class="info-detail">
+           <img src="" alt="">
+           <h3>Info</h3>
+           <p>Detail</p>
+         </div>
+
+         <div class="info-detail">
+           <img src="" alt="">
+           <h3>Info</h3>
+           <p>Detail</p>
+         </div>
+
+         <div class="info-item">
+           <img src="" alt="">
+           <h3>Info</h3>
+           <p>Detail</p>
+         </div>
+
+      </div>
+
+   </div>
+
+</section>
+
+{# Extra content section #}
+
+<section id="sbs-r">
+
+  <div class="container">
+
+   <div class="cs-text">
+      <h2>Additional info</h2>
+
+      <div class="info-item">
+        <img src="" alt="">
+        <p>In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis.</p>
+      </div>
+
+      <div class="info-item">
+        <img src="" alt="">
+        <p>In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis.</p>
+      </div>
+
+      <div class="info-item">
+        <img src="" alt="">
+        <p>In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis.</p>
+      </div>
+
+   </div>
+
+   <img src="" alt="">
+
+   </div>
+
+</section>
+
+{# Reviews #}
+
+<section id="reviews">
+
+     
+   <div class="container">
+
+      <h2>Reviews</h2>
+
+       <div class="review">
+          <p>Augue ut lectus arcu bibendum at varius. Suscipit tellus mauris a diam maecenas sed enim ut.
+           Quam nulla porttitor massa id neque. Ullamcorper malesuada proin libero nunc.</p>
+          <div>
+             <p>Client name</p>
+             <p>Company</p>
+          </div>
+
+          <div class="review">
+          <p>Augue ut lectus arcu bibendum at varius. Suscipit tellus mauris a diam maecenas sed enim ut.
+           Quam nulla porttitor massa id neque. Ullamcorper malesuada proin libero nunc.</p>
+          <div>
+             <p>Client name</p>
+             <p>Company</p>
+          </div>
+
+          <div class="review">
+          <p>Augue ut lectus arcu bibendum at varius. Suscipit tellus mauris a diam maecenas sed enim ut.
+           Quam nulla porttitor massa id neque. Ullamcorper malesuada proin libero nunc.</p>
+          <div>
+             <p>Client name</p>
+             <p>Company</p>
+          </div>
+
+       </div>
+   </div>
+</section>
+
+<section id="featured-articles">
+
+     <div class="container">
+
+     <h2>Featured Articles</h2>
+      {# loop over featured collection and create card for each post* #}
+       <div class="article">
+         <img src="" alt="">
+         <div>
+           <span>Topic</span>
+           <span>Date</span>
+           <h4>Article title</h4>
+         </div> 
+       <div>
+
+       <div class="article">
+         <img src="" alt="">
+         <div>
+           <span>Topic</span>
+           <span>Date</span>
+           <h4>Article title</h4>
+         </div> 
+       <div>
+
+       <div class="article">
+         <img src="" alt="">
+         <div>
+           <span>Topic</span>
+           <span>Date</span>
+           <h4>Article title</h4>
+         </div> 
+       <div>
+
+   </div>
+</section>
+
 
 {% include 'components/cta.html' %}

@@ -10,7 +10,99 @@ layout: layouts/base.html
 stylesheet:  ../css/services.css 
 ---
 
-{# page html #}
-<h1>Services page</h1>
+{# hero section #}
+<section id="hero">
+   <div class="container">
+       <h1>Services page</h1>
+       <p>Lorem ipsum dolor sit amet, labore et dolore magna aliqua.</p>
+
+       <ul>
+          <li>Service feature</li>
+          <li>Service feature</li>
+          <li>Service feature</li>
+       </ul>
+
+   </div>
+
+</section>
+
+{# Pricing cards #}
+<section id="pricing">
+   <div class="container">
+      <h2>Product Cards</h2>
+
+      <div class="product-card">
+        <h3>Product name</h3>
+
+        <p class="price"></p>
+        <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do mod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+        <ul>
+          <li>Service feature</li>
+          <li>Service feature</li>
+          <li>Service feature</li>
+       </ul>
+
+       <a class="product-button">Book call</a> 
+
+      </div>
+
+      <div class="product-card">
+        <h3>Product name</h3>
+
+        <p class="price"></p>
+        <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do mod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+        <ul>
+          <li>Service feature</li>
+          <li>Service feature</li>
+          <li>Service feature</li>
+       </ul>
+
+       <a class="product-button">Book call</a> 
+
+      </div>
+   </div>
+
+</section>
+
+{# How it works #}
+<section class="how-it-works">
+   <div class="container">
+     <h2>How it works</h2>
+
+     <div class="step-selection">
+       <div>
+          <button>1. The first step</button>
+          <button>2. The second step</button>
+          <button>3. The third step</button>
+       </div>
+
+     </div>
+
+     <div class="step-display">
+
+       <img src="" alt="">
+
+     </div>
+     
+   </div>
+
+</section>
+
+
+{# Portfolio #}
+<section class="portfolio">
+   <div class="container">
+     <h2>Portfolio</h2>
+      <div>
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+      </div> 
+   </div>
+
+</section>
 
 {% include 'components/cta.html' %}

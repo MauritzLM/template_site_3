@@ -10,7 +10,45 @@ layout: layouts/base.html
 stylesheet:  ../css/blog.css    
 ---
 
-{# page html #}
-<h1>Blog</h1>
+{# hero section #}
+
+<section id="hero">
+
+<div class="container">
+   <h1>Blog</h1>
+</div>
+
+{# tags* #}
+</section>
+
+{# Featured #}
+{# create and include featured post component* #}
+<section>
+   <div class="container">
+       <h2>Featured</h2>
+       <article class="featured">
+          <img src="" alt="">
+          <div>
+            <span>Topic</span><span>Date</span> 
+             <p>Article title</p>
+          </div>
+       </article>
+   </div>
+</section>
+
+{# for loop over post collection #}
+{# Latest #}
+<section>
+   <div class="container">
+       <h2>Latest</h2>
+
+       <div class="">
+         <article>
+
+         </article>
+       </div>
+   </div>
+</section>
+
 
 {% include 'components/cta.html' %}

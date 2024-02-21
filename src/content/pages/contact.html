@@ -8,6 +8,59 @@ stylesheet:  ../css/contact.css
 ---
 
 {# page html #}
-<h1>Contact page</h1>
+<section id="hero">
+ <div class="container">
+    <h1>Contact us</h1>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do mod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+    <div class="contact-details">
+
+      <div class="item">
+         <img src="" alt="">
+         <span>Whatsapp</span>
+         <span>1234567890</span>
+      </div>
+
+      <div class="item">
+         <img src="" alt="">
+         <span>Email</span>
+         <span>person@email</span>
+      </div>
+
+      <div class="item">
+         <img src="" alt="">
+         <span>Business hours:</span>
+         <span>Monday - Friday 9am - 5pm</span>
+      </div>
+
+    <div>
+
+
+    <!-- contact form -->
+      <form>
+           <div>
+             <label for="name">Name</label>
+              <input type="text" name="name" id="name"> 
+           </div>
+
+            <div>
+               <label for="email">Email</label>
+               <input type="email" name="email" id="email"> 
+           </div>
+
+           <div>
+                <label for="message">Your message</label>
+                <textarea id="message" name="message" rows="10" cols="20">
+                </textarea>
+           </div>
+             
+          <button type="submit" class="cs-button">Submit</button>
+      </form>
+ </div>
+
+</section>
+
+
 
 {% include 'components/cta.html' %}
