@@ -1,7 +1,23 @@
-<header>
-  <nav>
+<header id="cs-navigation">
 
-    <ul>
+  {# logo here #}
+  <a href="/">
+  <img src="/assets/svgs/cafe-outline.svg" alt="" width="40px" height="40px">
+  </a>
+
+  <nav role="navigation">
+
+  <!--Mobile Nav Toggle-->
+            <button class="cs-toggle" aria-label="mobile menu toggle">
+                <div class="cs-box" aria-hidden="true">
+                    <span class="cs-line cs-line1" aria-hidden="true"></span>
+                    <span class="cs-line cs-line2" aria-hidden="true"></span>
+                    <span class="cs-line cs-line3" aria-hidden="true"></span>
+                </div>
+            </button>
+
+   <div class="nav-ul-wrapper">
+    <ul class="nav-ul">
         {% set navPages = collections.all | eleventyNavigation %}
         <!-- Loop through all pages with a eleventyNavigation in the frontmatter -->
         {% for entry in navPages %}
@@ -12,6 +28,14 @@
 
         {% endfor %}
 
-        </ul>
+      </ul>
+
+        {# contact button #}
+
+      <a href="/contact" class="cs-button">Contact</a>
+
+      </div>
   </nav>
+
+  {# dark mode toggle here #}
 </header>
