@@ -1,4 +1,56 @@
 <footer>
- <p>This is the footer</p>
+   <div class="container">
+
+      <div class="company-info">
+        
+        <a href="/">
+          <img src="/assets/svgs/cafe-outline.svg" alt="" width="40px" height="40px">
+        </a>
+
+        <div class="social-links">
+           {# add icons #}
+        <div>
+
+      </div>
+
+      <!-- site links -->
+        <div class="sitemap">
+            <h4>Sitemap</h4>
+
+            <div>
+               <ul>
+                   {% set navPages = collections.all | eleventyNavigation %}
+                   <!-- Loop through all pages with a eleventyNavigation in the frontmatter -->
+                   {% for entry in navPages %}
+
+                       <li>
+                           <a href="{{entry.url}}" class="{% if entry.url == page.url %} cs-active {% endif %}">{{entry.key}}</a>
+                       </li>
+
+                   {% endfor %}
+               </ul>
+
+            </div>
+        </div>
+
+        <div class="support-links">
+           <h4>Support</h4>
+            <ul>
+                <li><a href="#">Faq</a></li>
+                <li><a href="/contact">Contact</a></li>
+            <ul> 
+        </div>
+
+        <div class="featured-articles">
+          <h4>Featured Articles</h4>
+           <ul>
+              <li><a href="#">Article name</a></li>
+              <li><a href="#">Article name</a></li>
+              <li><a href="#">Article name</a></li>
+           </ul>
+
+        </div>
+
+   </div>
 
 </footer>
