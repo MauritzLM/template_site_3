@@ -21,34 +21,39 @@ stylesheet:  ../css/blog.css
 {# tags* #}
 </section>
 
-{# Featured #}
-{# create and include featured post component* #}
+{# Featured article #}
 <section>
    <div class="container">
        <h2>Featured</h2>
        <article class="featured">
-          <img src="" alt="">
-          <div>
-            <span>Topic</span><span>Date</span> 
-             <p>Article title</p>
-          </div>
+          {% include 'components/featured-post.html' %}
        </article>
    </div>
 </section>
 
-{# for loop over post collection #}
-{# Latest #}
 <section>
-   <div class="container">
-       <h2>Latest</h2>
+ <div class="container">
 
-       <div class="">
-         <article>
+{% if collections.post | length == 0 %}
+    <h2>No current posts</h2>
+{% else %}
+   {%- for post in collections.post | reverse -%}
+     <article>
+       <h3>{{ post.data.title }}</h3>
 
-         </article>
-       </div>
-   </div>
+       <p>{{ post.data.description }}</p>
+
+       <span>by {{ post.data.author }}</span>
+       <span class="blog-date">{{ post.date | postDate }}</span>
+
+       <a href="{{ post.url }}">Continue reading</a>
+     
+     </article>
+   {%- endfor -%}
+
+{% endif %}
+
+  </div>
 </section>
-
 
 {% include 'components/cta.html' %}

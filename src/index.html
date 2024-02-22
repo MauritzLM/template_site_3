@@ -148,7 +148,7 @@ stylesheet: css/home.css
 
 <section id="reviews">
 
-     
+     {# create reviews collection and create card for each review* #}
    <div class="container">
 
       <h2>Reviews</h2>
@@ -186,36 +186,20 @@ stylesheet: css/home.css
      <div class="container">
 
      <h2>Featured Articles</h2>
-      {# loop over featured collection and create card for each post* #}
-       <div class="article">
-         <img src="" alt="">
-         <div>
-           <span>Topic</span>
-           <span>Date</span>
-           <h4>Article title</h4>
-         </div> 
-       <div>
 
+      {# loop over featured collection and create card for each post #}
+      {%- for post in collections.featured | reverse -%}
        <div class="article">
          <img src="" alt="">
          <div>
            <span>Topic</span>
-           <span>Date</span>
-           <h4>Article title</h4>
+           <span>{{ post.date | postDate }}</span>
+           <h4>{{ post.data.title }}</h4>
          </div> 
        <div>
-
-       <div class="article">
-         <img src="" alt="">
-         <div>
-           <span>Topic</span>
-           <span>Date</span>
-           <h4>Article title</h4>
-         </div> 
-       <div>
+    {%- endfor -%}
 
    </div>
 </section>
-
 
 {% include 'components/cta.html' %}
