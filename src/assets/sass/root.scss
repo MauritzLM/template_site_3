@@ -3,7 +3,7 @@
 /* VARIABLES */
 :root {
     /* colors */
-    --primary-500: blue;
+    --primary-500: rgb(28, 139, 204);
 
     --grey-100: rgb(243, 241, 241);
     --grey-500: grey;
@@ -233,6 +233,13 @@ button {
 
             }
         }
+    }
+
+    /* Dark mode toggle */
+    .toggle-container {
+        position: absolute;
+        right: 5em;
+
     }
 }
 
