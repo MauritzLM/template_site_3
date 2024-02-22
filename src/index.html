@@ -148,38 +148,25 @@ stylesheet: css/home.css
 
 <section id="reviews">
 
-     {# create reviews collection and create card for each review* #}
    <div class="container">
 
       <h2>Reviews</h2>
 
-       <div class="review">
-          <p>Augue ut lectus arcu bibendum at varius. Suscipit tellus mauris a diam maecenas sed enim ut.
-           Quam nulla porttitor massa id neque. Ullamcorper malesuada proin libero nunc.</p>
-          <div>
-             <p>Client name</p>
-             <p>Company</p>
-          </div>
+     {# create review card for each review #}
+      {% for review in reviews %}
+         <div class="review">
+             <p>{{ review.text }}</p>
+             <div>
+                 <p>{{ review.client_name }}</p>
+                 <p><{{ review.client_company }}</p>
+             </div>
+         </div>
 
-          <div class="review">
-          <p>Augue ut lectus arcu bibendum at varius. Suscipit tellus mauris a diam maecenas sed enim ut.
-           Quam nulla porttitor massa id neque. Ullamcorper malesuada proin libero nunc.</p>
-          <div>
-             <p>Client name</p>
-             <p>Company</p>
-          </div>
+      {% endfor %}
 
-          <div class="review">
-          <p>Augue ut lectus arcu bibendum at varius. Suscipit tellus mauris a diam maecenas sed enim ut.
-           Quam nulla porttitor massa id neque. Ullamcorper malesuada proin libero nunc.</p>
-          <div>
-             <p>Client name</p>
-             <p>Company</p>
-          </div>
-
-       </div>
    </div>
 </section>
+
 
 <section id="featured-articles">
 
@@ -189,14 +176,17 @@ stylesheet: css/home.css
 
       {# loop over featured collection and create card for each post #}
       {%- for post in collections.featured | reverse -%}
+      
        <div class="article">
          <img src="" alt="">
          <div>
            <span>Topic</span>
            <span>{{ post.date | postDate }}</span>
            <h4>{{ post.data.title }}</h4>
+           <a href="{{ post.url }}">Read article</a>
          </div> 
        <div>
+       
     {%- endfor -%}
 
    </div>
