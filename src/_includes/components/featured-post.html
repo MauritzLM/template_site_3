@@ -1,0 +1,6 @@
+
+{%- for post in collections.featured | reverse -%}
+   <h3>{{ post.data.title }}</h3>
+   <span>{{ post.date | postDate }}</span>
+
+{%- endfor -%}
