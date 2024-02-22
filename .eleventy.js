@@ -15,7 +15,7 @@ module.exports = function (eleventyConfig) {
      // date filter
      eleventyConfig.addFilter("postDate", (dateObj) => {
         return new Date(dateObj).toLocaleDateString('en-gb', {
-            weekday: 'short', year: "numeric", month: "short",
+            year: "numeric", month: "short",
             day: "numeric"
         });
     });
