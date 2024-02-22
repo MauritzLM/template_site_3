@@ -1,5 +1,5 @@
 ---
-title: Featured post
+title: Featured post title
 description: Description of the featured article.
 author: Admin
 date: 2023-06-08T15:26:46.705Z
