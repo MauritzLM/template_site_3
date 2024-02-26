@@ -5,6 +5,7 @@ eleventyComputed:
     title: '{{ title }}'
     description: '{{ description }}'
     preloadImg: '{{ image }}'
+    imgSrc: '{{ imgSrc }}' 
     permalink: '/blog/{{ title | slug }}/index.html'
 ---
 
@@ -22,9 +23,15 @@ eleventyComputed:
        <article>
        <!--Article Info-->
          <div class="article-group">
+             <picture>
+              <source srcset="{{ imgSrc }}"/>
+              <img src="{{ imgSrc }}"> 
+            </picture>
+
             <h2>{{ title }}</h2>
             <p>{{ description }}</p>
             <span>by {{ author }}</span>
+            
          </div>
          
          <!-- Article content--> 
