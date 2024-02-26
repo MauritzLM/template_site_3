@@ -43,6 +43,11 @@
     <script defer src="/assets/js/nav.js"></script>
     <script defer src="/assets/js/dark.js"></script>
 
+    {# services page script #}
+    {% if script != '' %}
+      <script defer src="{{ script }}"></script>
+    {% endif %}
+
 
     <!--For home page, use service keywords for the title, including location for SEO.
         Other pages should just include the page name.
