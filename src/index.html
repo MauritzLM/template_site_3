@@ -7,7 +7,8 @@ eleventyNavigation:
    key: Home 
    order: 100
 layout: layouts/base.html
-stylesheet: css/home.css 
+stylesheet: css/home.css
+script: '' 
 ---
 
 {# Hero section #}
@@ -21,6 +22,12 @@ stylesheet: css/home.css
       <p>Lorem ipsum dolor sit amet, labore et dolore magna aliqua.</p>
       <a class="cs-button">Get Started</a>
 
+      <picture>
+          <source srcset="/assets/images/home-hero.webp"/>
+
+          <img src="/assets/images/home-hero.webp"> 
+      </picture>
+
    </div>   
 
 </section>
@@ -31,19 +38,19 @@ stylesheet: css/home.css
      <div class="container">
 
         <div class="service-card">
-           {# add img #}
+           <img src="/assets/svgs/architecture.svg" height="50" width="50">
            <h3>Service</h3>
            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
         </div>
 
         <div class="service-card">
-           {# add img #}
+           <img src="/assets/svgs/engineering.svg" height="50" width="50">
            <h3>Service</h3>
            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
         </div>
 
         <div class="service-card">
-           {# add img #}
+           <img src="/assets/svgs/front_loader.svg" height="50" width="50">
            <h3>Service</h3>
            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
         </div>
@@ -57,12 +64,16 @@ stylesheet: css/home.css
 
  <div class="container">
 
-  <img src="" alt ="">
+    <picture>
+          <source srcset="/assets/images/home-about.webp"/>
+
+          <img src="/assets/images/home-about.webp"> 
+      </picture>
 
   <div class="cs-text"> 
      <h2>About</h2>
      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do mod tempor incididunt ut labore et dolore magna aliqua.</p>
-     <a class="cs-button">Meet our team</a>
+     <a class="cs-button" href="/company">Meet our team</a>
   </div>
 
  </div> 
@@ -122,23 +133,27 @@ stylesheet: css/home.css
       <h2>Additional info</h2>
 
       <div class="info-item">
-        <img src="" alt="">
+        <img src="/assets/svgs/arrow_right.svg" alt="" width="30" height="30">
         <p>In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis.</p>
       </div>
 
       <div class="info-item">
-        <img src="" alt="">
+        <img src="/assets/svgs/arrow_right.svg" alt="" width="30" height="30">
         <p>In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis.</p>
       </div>
 
       <div class="info-item">
-        <img src="" alt="">
+        <img src="/assets/svgs/arrow_right.svg" alt="" width="30" height="30">
         <p>In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis.</p>
       </div>
 
    </div>
 
-   <img src="" alt="">
+   <picture>
+          <source srcset="/assets/images/info.webp"/>
+
+          <img src="/assets/images/info.webp"> 
+   </picture>
 
    </div>
 
@@ -168,17 +183,22 @@ stylesheet: css/home.css
 </section>
 
 
-<section id="featured-articles">
+<section id="recent-articles">
 
      <div class="container">
 
-     <h2>Featured Articles</h2>
+     <h2>Recent Articles</h2>
 
-      {# loop over featured collection and create card for each post #}
-      {%- for post in collections.featured | reverse -%}
+      {# loop over recent collection and create card for each post #}
+      {%- for post in collections.recent | reverse -%}
       
        <div class="article">
-         <img src="" alt="">
+         <picture>
+          <source srcset="{{ post.data.imgSrc }}"/>
+
+          <img src="{{ post.data.imgSrc }}"> 
+        </picture>
+
          <div>
            <span>Topic</span>
            <span>{{ post.date | postDate }}</span>

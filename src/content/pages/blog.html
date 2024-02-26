@@ -7,7 +7,9 @@ eleventyNavigation:
    key: Blog 
    order: 400
 layout: layouts/base.html
-stylesheet:  ../css/blog.css    
+stylesheet:  ../css/blog.css
+script: ''
+
 ---
 
 {# hero section #}
@@ -39,6 +41,11 @@ stylesheet:  ../css/blog.css
 {% else %}
    {%- for post in collections.post | reverse -%}
      <article>
+      <picture>
+          <source srcset="{{ post.data.imgSrc }}"/>
+
+          <img src="{{ post.data.imgSrc }}"> 
+      </picture>
        <h3>{{ post.data.title }}</h3>
 
        <p>{{ post.data.description }}</p>

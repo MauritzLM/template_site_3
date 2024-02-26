@@ -7,7 +7,8 @@ eleventyNavigation:
    key: Company 
    order: 300
 layout: layouts/base.html
-stylesheet:  ../css/company.css  
+stylesheet:  ../css/company.css
+script: ''  
 ---
 
 {# Hero #}
@@ -18,7 +19,11 @@ stylesheet:  ../css/company.css
       Egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate.
       Blandit volutpat maecenas volutpat blandit aliquam. Arcu non odio euismod lacinia at quis risus sed. </p>
 
-      <img src="" alt="">
+       <picture>
+          <source srcset="/assets/images/company-hero.webp"/>
+
+          <img src="/assets/images/company-hero.webp"> 
+      </picture>
   </div>
 
 </section>
@@ -77,7 +82,7 @@ stylesheet:  ../css/company.css
      <div class="">
 
         <div class="team-member">
-          <img src="" alt="">
+          <img src="/assets/images/team1.webp" alt="">
           <div>
               <p>Name</p>
               <p>Title</p>
@@ -85,7 +90,7 @@ stylesheet:  ../css/company.css
         </div>
 
         <div class="team-member">
-          <img src="" alt="">
+          <img src="/assets/images/team2.webp" alt="">
           <div>
               <p>Name</p>
               <p>Title</p>
@@ -93,7 +98,7 @@ stylesheet:  ../css/company.css
         </div>
 
         <div class="team-member">
-          <img src="" alt="">
+          <img src="/assets/images/team3.webp" alt="">
           <div>
               <p>Name</p>
               <p>Title</p>
