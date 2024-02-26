@@ -1,9 +1,70 @@
 /* STYLES FOR THE HOME PAGE */
 
 #hero {
-    margin-top: 7em;
+    padding-top: 7em;
+    position: relative;
+    z-index: 1;
+    height: 50vh;
 
     h1 {
-        color: blue;
+        color: var(--grey-100);
+    }
+
+    picture {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -2;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover
+        }
+    } 
+}
+
+#about {
+    .container {
+        picture {
+            width: 100%;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+
+
+#sbs-r {
+    .container {
+        picture {
+            width: 100%;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+#recent-articles {
+    .container {
+        picture {
+            width: 100%;
+
+            img {
+                width: 100%;
+            }
+        }
     }
 }
