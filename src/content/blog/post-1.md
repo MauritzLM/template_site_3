@@ -3,8 +3,10 @@ title: Article title
 description: Description of the article.
 author: Admin
 date: 2023-06-08T15:26:46.705Z
+imgSrc: /assets/images/article1.webp
 tags:
     - post
+    - recent
 ---
 
 ## Hospes meus

@@ -3,9 +3,11 @@ title: Featured post title
 description: Description of the featured article.
 author: Admin
 date: 2023-06-08T15:26:46.705Z
+imgSrc: /assets/images/article2.webp
 tags:
     - post
     - featured
+    - recent
 ---
 
 ## This a featured article
