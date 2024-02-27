@@ -1,5 +1,5 @@
 
-{%- for post in collections.featured | reverse -%}
+{%- for post in collections.featured -%}
    <h3>{{ post.data.title }}</h3>
    <span>{{ post.date | postDate }}</span>
 
