@@ -24,9 +24,13 @@ script:  /assets/js/services.js
        </ul>
 
         <picture>
-          <source srcset="/assets/images/services-hero.webp"/>
+          <!-- Mobile image -->
+          <source media="(max-width: 600px)" srcset="/assets/images/services-hero.webp"/>
+          <!-- Desktop image -->
+          <source media="(min-width: 601px)" srcset="/assets/images/services-hero.webp"/>
 
-          <img src="/assets/images/services-hero.webp"> 
+          <!-- Fallback image -->
+          <img src="/assets/images/services-hero.webp" alt="property by lake" aria-hidden="true" decoding="async" width="" height="" loading="eager"> 
       </picture>
 
    </div>
@@ -89,8 +93,8 @@ script:  /assets/js/services.js
 
    {# add functionality* #}
      <div class="step-display">
-
-          <img src="/assets/images/step1.webp" alt=""> 
+           {# add some text #}
+          <img src="/assets/images/step1.webp" alt="" aria-hidden="true" decoding="async" width="" height="" loading="lazy"> 
    
      </div>
      
@@ -104,10 +108,10 @@ script:  /assets/js/services.js
    <div class="container">
      <h2>Portfolio</h2>
       <div>
-        <img src="/assets/images/portfolio1.webp" alt="">
-        <img src="/assets/images/portfolio2.webp" alt="">
-        <img src="/assets/images/portfolio3.webp" alt="">
-        <img src="/assets/images/portfolio4.webp" alt="">
+        <img src="/assets/images/portfolio1.webp" alt="house1" aria-hidden="true" decoding="async" width="" height="" loading="lazy">
+        <img src="/assets/images/portfolio2.webp" alt="house2" aria-hidden="true" decoding="async" width="" height="" loading="lazy">
+        <img src="/assets/images/portfolio3.webp" alt="house3" aria-hidden="true" decoding="async" width="" height="" loading="lazy">
+        <img src="/assets/images/portfolio4.webp" alt="house4" aria-hidden="true" decoding="async" width="" height="" loading="lazy">
       </div> 
    </div>
 

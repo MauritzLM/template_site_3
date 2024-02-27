@@ -20,9 +20,13 @@ script: ''
       Blandit volutpat maecenas volutpat blandit aliquam. Arcu non odio euismod lacinia at quis risus sed. </p>
 
        <picture>
-          <source srcset="/assets/images/company-hero.webp"/>
-
-          <img src="/assets/images/company-hero.webp"> 
+          <!-- Mobile image -->
+          <source media="(max-width: 600px)" srcset="/assets/images/company-hero.webp"/>
+          <!-- Desktop image -->
+          <source media="(min-width: 601px)" srcset="/assets/images/company-hero.webp"/>
+          
+          <!-- Fallback image -->
+          <img src="/assets/images/company-hero.webp" alt="team" aria-hidden="true" decoding="async" width="" height="" loading="eager"> 
       </picture>
   </div>
 
@@ -82,7 +86,7 @@ script: ''
      <div class="">
 
         <div class="team-member">
-          <img src="/assets/images/team1.webp" alt="">
+          <img src="/assets/images/team1.webp" alt="team member 1" aria-hidden="true" decoding="async" width="" height="" loading="lazy">
           <div>
               <p>Name</p>
               <p>Title</p>
@@ -90,7 +94,7 @@ script: ''
         </div>
 
         <div class="team-member">
-          <img src="/assets/images/team2.webp" alt="">
+          <img src="/assets/images/team2.webp" alt="team member 2" aria-hidden="true" decoding="async" width="" height="" loading="lazy">
           <div>
               <p>Name</p>
               <p>Title</p>
@@ -98,7 +102,7 @@ script: ''
         </div>
 
         <div class="team-member">
-          <img src="/assets/images/team3.webp" alt="">
+          <img src="/assets/images/team3.webp" alt="team member 3" aria-hidden="true" decoding="async" width="" height="" loading="lazy">
           <div>
               <p>Name</p>
               <p>Title</p>
