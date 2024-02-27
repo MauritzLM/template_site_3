@@ -4,6 +4,7 @@ description: Description of the article.
 author: Admin
 date: 2023-06-08T15:26:46.705Z
 imgSrc: /assets/images/article1.webp
+imgAlt: 'post-1 image'
 tags:
     - post
     - recent
