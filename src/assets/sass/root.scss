@@ -23,6 +23,30 @@
     --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
 }
 
+// FONTS
+/* lato-700 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/assets/fonts/lato-v24-latin-700.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* lato-900 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 900;
+    src: url('/assets/fonts/lato-v24-latin-900.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+
 /* DARK MODE STYLES */
 html[data-theme='light'] {
     --bodyTextColor: var(--grey-900);
@@ -55,6 +79,15 @@ body {
 
 h1 {
     font-size: var(--headerFontSize);
+    font-weight: 900;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: "Lato";
 }
 
 ul {
@@ -91,7 +124,7 @@ button {
 #cs-navigation {
     width: 100%;
     padding: calc(12 / 16 * 1rem) calc(16 / 16 * 1rem);
-    background-color: #aaa8a8;
+    background-color: transparent;
     // box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     position: fixed;
     top: 0;
@@ -244,6 +277,11 @@ button {
         position: absolute;
         right: 5em;
 
+        #theme-toggle {
+            border: none;
+            background-color: inherit;
+        }
+
     }
 }
 
@@ -263,7 +301,7 @@ button {
             flex-direction: row;
             justify-content: space-between;
             gap: 1em;
-            background-color: #aaa8a8;
+            background-color: inherit;
 
             .nav-ul {
                 height: 25px;
@@ -279,9 +317,58 @@ button {
 }
 
 /*  FOOTER STYLES  */
-
 footer {
-    ul {
-        list-style: none;
+    background-color: var(--grey-900);
+    color: var(--grey-100);
+    padding: 2em 0;
+
+    .container {
+        .company-info {
+            border-bottom: 1px solid;
+            text-align: center;
+            padding-bottom: 2em;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            padding: 1em 0;
+
+            h4 {
+                font-size: 1.2rem;
+            }
+
+            ul {
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                gap: .8em;
+
+                li {
+                    a {
+                        color: inherit;
+                    }
+                }
+            }
+        }
+       
+        .social-links {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: .6em;
+        }
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 1023px) {
+    footer {
+        .container {
+            .links {
+                flex-direction: row;
+                justify-content: space-around;
+            }
+        }
     }
 }
