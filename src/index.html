@@ -28,7 +28,7 @@ script: ''
          <!-- Desktop image --> 
           <source media="(min-width: 601px)" srcset="/assets/images/home-hero.webp"/>
          <!-- Fallback image -->
-          <img src="/assets/images/home-hero.webp" alt="building" aria-hidden="true" decoding="async" width="1920" height="1200" loading="eager"> 
+          <img src="/assets/images/home-hero.webp" alt="building" aria-hidden="true" decoding="async" width="1920" height="1200" loading="eager"/> 
       </picture>
 
    </div>   
@@ -41,19 +41,19 @@ script: ''
      <div class="container">
 
         <div class="service-card">
-           <img src="/assets/svgs/architecture.svg" height="50" width="50" alt="architecture icon" aria-hidden="true" decoding="async" loading="lazy">
+           <img src="/assets/svgs/architecture.svg" height="50" width="50" alt="architecture icon" aria-hidden="true" decoding="async" loading="lazy"/>
            <h3>Service</h3>
            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
         </div>
 
         <div class="service-card">
-           <img src="/assets/svgs/engineering.svg" height="50" width="50" alt="engineering icon" aria-hidden="true" decoding="async" loading="lazy">
+           <img src="/assets/svgs/engineering.svg" height="50" width="50" alt="engineering icon" aria-hidden="true" decoding="async" loading="lazy"/>
            <h3>Service</h3>
            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
         </div>
 
         <div class="service-card">
-           <img src="/assets/svgs/front_loader.svg" height="50" width="50" alt="front loader icon" aria-hidden="true" decoding="async" loading="lazy">
+           <img src="/assets/svgs/front_loader.svg" height="50" width="50" alt="front loader icon" aria-hidden="true" decoding="async" loading="lazy"/>
            <h3>Service</h3>
            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
         </div>
@@ -74,11 +74,11 @@ script: ''
           <source media="(min-width: 601px)" srcset="/assets/images/home-about.webp"/>
 
           <!-- Fallback image -->
-          <img src="/assets/images/home-about.webp" alt="team member" aria-hidden="true" decoding="async" width="" height="" loading="lazy"> 
+          <img src="/assets/images/home-about.webp" alt="team member" aria-hidden="true" decoding="async" width="" height="" loading="lazy"/> 
       </picture>
 
   <div class="cs-text"> 
-     <h2>About</h2>
+     {# <h2>About</h2> #}
      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do mod tempor incididunt ut labore et dolore magna aliqua.</p>
      <a class="cs-button" href="/company">Meet our team</a>
   </div>
@@ -118,7 +118,7 @@ script: ''
            <p>Detail</p>
          </div>
 
-         <div class="info-item">
+         <div class="info-detail">
            <img src="" alt="" aria-hidden="" decoding="" width="" height="" loading="">
            <h3>Info</h3>
            <p>Detail</p>
@@ -163,7 +163,7 @@ script: ''
           <source media="(min-width: 601px)" srcset="/assets/images/info.webp"/>
 
           <!-- Fallback image -->
-          <img src="/assets/images/info.webp" alt="happy worker" aria-hidden="true" decoding="async" width="" height="" loading="lazy"> 
+          <img src="/assets/images/info.webp" alt="happy worker" aria-hidden="true" decoding="async" width="" height="" loading="lazy"/> 
    </picture>
 
    </div>
@@ -181,10 +181,12 @@ script: ''
      {# create review card for each review #}
       {% for review in reviews %}
          <div class="review">
+            <div class="review-text">
              <p>{{ review.text }}</p>
-             <div>
+            </div> 
+             <div class="review-client">
                  <p>{{ review.client_name }}</p>
-                 <p><{{ review.client_company }}</p>
+                 <p>{{ review.client_company }}</p>
              </div>
          </div>
 
@@ -205,18 +207,24 @@ script: ''
       
        <div class="article">
          <picture>
-          <source srcset="{{ post.data.imgSrc }}"/>
-
-          <img src="{{ post.data.imgSrc }}" alt="{{ post.data.imgAlt }}" aria-hidden="true" decoding="async" width="" height="" loading="lazy"> 
+           <!-- Mobile image -->
+           <source media="(max-width: 600px)" srcset="{{ post.data.imgSrc }}"/>
+           <!-- Desktop image -->
+           <source media="(min-width: 600px)" srcset="{{ post.data.imgSrc }}"/> 
+         
+           <!-- Fallback image -->
+           <img src="{{ post.data.imgSrc }}" alt="{{ post.data.imgAlt }}" aria-hidden="true" decoding="async" width="" height="" loading="lazy"/> 
         </picture>
 
-         <div>
+         <div class="article-detail">
            <span>Topic</span>
            <span>{{ post.date | postDate }}</span>
            <h4>{{ post.data.title }}</h4>
-           <a href="{{ post.url }}">Read article</a>
+           <a href="{{ post.url }}" class="article-link">
+           <span>Read article</span> <img src="/assets/svgs/arrow_forward.svg" aria-hidden="true" decoding="async" width="15" height="15" loading="lazy"/>
+           </a>
          </div> 
-       <div>
+       </div>
        
     {%- endfor -%}
 

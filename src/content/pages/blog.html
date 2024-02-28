@@ -47,6 +47,7 @@ script: ''
           <!-- Desktop image -->
           <source media="(min-width: 601px)" srcset="{{ post.data.imgSrc }}"/>
 
+          <!-- Fallback image --> 
           <img src="{{ post.data.imgSrc }}" alt="{{ post.data.imgAlt }}" aria-hidden="true" decoding="async" width="" height="" loading=""> 
       </picture>
        <h3>{{ post.data.title }}</h3>
