@@ -1,8 +1,123 @@
 /* STYLES FOR THE SERVICES PAGE */
+/* HERO SECTION*/
 #hero {
     padding-top: 7em;
 
-    h1 {
-        color: orange;
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+
+        .cs-text {
+            h1 {
+                color: orange;
+            }
+
+            ul {
+                padding-left: 2em;
+            }
+        }
+
+        picture {
+            max-width: 700px;
+            display: block;
+
+            img {
+                width: 100%;
+            }
+        }
     }
+}
+
+/* PRICING SECTION */
+#pricing {
+    .container {
+        .product-card {
+            padding: 1.5em;
+            border-radius: 5px;
+            max-width: 550px;
+
+            .price {
+                font-size: 1.8rem;
+                font-weight: 600;
+            }
+
+            ul {
+                padding-left: 2em;
+                display: flex;
+                flex-direction: column;
+                gap: .5em;
+                margin-top: 1.5em;
+            }
+
+            .cs-button {
+                width: 100%;
+                text-align: center;
+                margin-top: 1em;
+            }
+
+            &:nth-of-type(1) {
+                background-color: beige;
+            }
+    
+            &:nth-of-type(2) {
+                background-color: rgb(29, 29, 28);
+                margin-top: 2em;
+                color: var(--grey-100);
+            }
+        }
+    }
+}
+
+/* HOW IT WORKS SECTION */
+#how-it-works {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1em;
+
+        .step-selection {
+            display: flex;
+            flex-direction: column;
+            background-color: rgb(44, 61, 77);
+            padding: 1.5em;
+            border-radius: 5px;
+            // gap: 1em;
+
+            button {
+                border: none;
+                background-color: inherit;
+                padding: 1em 0 1em 1em;
+                font: inherit;
+                font-weight: 500;
+                text-align: left;
+                border-radius: 5px;
+            }
+
+            .cs-active {
+                background-color: aliceblue;
+            }
+        }
+
+        .step-display {
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+/* PORTFOLIO SECTION */
+#portfolio {
+    .container {
+        div {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1em;
+
+            img {
+                width: 100%;
+            }
+        }
+    } 
 }
