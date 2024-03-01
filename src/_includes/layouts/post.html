@@ -29,8 +29,8 @@ eleventyComputed:
             </picture>
 
             <h2>{{ title }}</h2>
-            <p>{{ description }}</p>
-            <span>by {{ author }}</span>
+            {# <p>{{ description }}</p> #}
+            <p>{{ date | postDate}} - by {{ author }}</p>
             
          </div>
          
@@ -40,5 +40,17 @@ eleventyComputed:
          </div>      
        </article>
 
+       {# add share links* #}
+    <div class="share-links">
+         <p>Share</p>
+         <div>
+            <a href=""><img src="/assets/svgs/logo-facebook.svg" alt="" height="25" width="25" aria-hidden="true" decoding="async" loading="lazy"></a>
+            <a href=""><img src="/assets/svgs/mail.svg" alt="" height="25" width="25" aria-hidden="true" decoding="async" loading="lazy"></a>
+            <a href=""><img src="/assets/svgs/linkedin.svg" alt="" height="25" width="25" aria-hidden="true" decoding="async" loading="lazy"></a>
+         </div>
+
+    </div>
+
+    
     </div>
 <section>
