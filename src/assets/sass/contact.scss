@@ -2,4 +2,73 @@
 
 #hero {
     padding-top: 7em;
+
+    .container {
+        .contact-details {
+            // padding: 1em;
+            display: flex;
+            flex-direction: column;
+    
+            gap: 1em;
+            max-width: 400px;
+            margin: 4em auto;
+
+            .item {
+                display: grid;
+                grid-template-columns: .4fr 1fr 2fr;
+                gap: .5em;
+                align-items: center;
+
+                svg {
+                    fill: var(--bodyTextColor);
+                }
+
+                span:nth-of-type(1) {
+                    font-weight: 500;
+                }
+
+                span:nth-of-type(2) {
+                    font-size: 1.1rem;
+                }
+            }
+        }
+
+        form {
+            padding: 1em;
+            display: flex;
+            flex-direction: column;
+            gap: 1.6em;
+            max-width: 500px;
+
+            div {
+                display: flex;
+                flex-direction: column;
+                gap: .7em;
+
+                label {
+                    font-size: 1.1rem;
+                    // font-weight: 500;
+                }
+
+                input,
+                textarea {
+                    padding: .5em;
+                    font: inherit;
+                    border-radius: 5px;
+                    border: 1px solid rgb(221, 217, 217);
+                }
+            }
+
+            button {
+                font: inherit;
+                font-weight: 500;
+                background-color: var(--bodyTextColor);
+                color: var(--bodyBackgroundColor);
+                border: none;
+                padding: .6em 1.2em;
+                border-radius: 5px;
+                display: inline-block;
+            }
+        }
+    }
 }

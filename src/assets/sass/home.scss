@@ -1,7 +1,7 @@
 /* STYLES FOR THE HOME PAGE */
 /* HERO SECTION */
 #hero {
-    padding-top: 7em;
+    padding-top: 8em;
     position: relative;
     z-index: 1;
     height: 60vh;
@@ -64,6 +64,8 @@
 
 /* ABOUT SECTION */
 #about {
+    padding-top: 6em;
+
     .container {
         picture {
             width: 100%;
@@ -125,6 +127,8 @@
 
 /* ADDITIONAL INFO SECTION */
 #sbs-r {
+    padding-bottom: 2em;
+
     .container {
 
         display: flex;
@@ -174,7 +178,8 @@
 
         h2 {
             text-align: center;
-            margin: 0;
+            margin-top: 0;
+            // margin-bottom: ;
         }
 
         .review {
@@ -210,6 +215,8 @@
 }
 
 #recent-articles {
+    padding-bottom: 7em;
+
     .container {
         display: grid;
         grid-template-columns: 1fr;

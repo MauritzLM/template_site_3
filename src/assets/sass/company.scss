@@ -1,8 +1,90 @@
 /* STYLES FOR THE COMPANY PAGE */
+/* HERO SECTION */
 #hero {
     padding-top: 7em;
+    padding-bottom: 1em;
 
-    h1 {
-        color: pink;
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+
+        h1 {
+            color: rgb(218, 105, 124);
+        }
+
+        picture {
+            max-width: 700px;
+            display: block;
+            // order: -1;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+/* VALUES SECTION */
+#values {
+    padding-bottom: 1em;
+
+    .container {
+        h2 {
+            margin-bottom: 2em;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1em;
+            justify-items: center;
+
+            .value-card {
+                background-color: bisque;
+                padding: 1em;
+                border-radius: 5px;
+                width: 300px;
+            }
+        }
+    }
+}
+
+
+/* OUR TEAM SECTION */
+#our-team {
+    padding-bottom: 7em;
+
+    .container {
+        h2 {
+            margin-bottom: 2em;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            justify-items: center;
+            gap: 2em;
+
+            .team-member {
+                width: 330px;
+                display: flex;
+                flex-direction: column;
+
+                img {
+                    width: 100%;
+                }
+
+                div {
+                    background-color: rgb(215, 224, 231);
+                    padding: .5em 1.2em;
+                    // text-align: center;
+
+                    //  p {
+                    //      margin: 0;
+                    // }
+                }
+            }
+        }
     }
 }

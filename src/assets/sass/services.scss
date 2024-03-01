@@ -1,7 +1,9 @@
 /* STYLES FOR THE SERVICES PAGE */
-/* HERO SECTION*/
+
+/* HERO SECTION */
 #hero {
     padding-top: 7em;
+    padding-bottom: 1em;
 
     .container {
         display: flex;
@@ -11,16 +13,21 @@
         .cs-text {
             h1 {
                 color: orange;
+                margin-top: 0;
             }
 
             ul {
                 padding-left: 2em;
+                display: flex;
+                flex-direction: column;
+                gap: .5em;
             }
         }
 
         picture {
             max-width: 700px;
             display: block;
+            // order: -1;
 
             img {
                 width: 100%;
@@ -31,7 +38,13 @@
 
 /* PRICING SECTION */
 #pricing {
+    // padding: 1em;
+
     .container {
+        h2 {
+            margin-bottom: 2em;
+        }
+
         .product-card {
             padding: 1.5em;
             border-radius: 5px;
@@ -59,7 +72,7 @@
             &:nth-of-type(1) {
                 background-color: beige;
             }
-    
+
             &:nth-of-type(2) {
                 background-color: rgb(29, 29, 28);
                 margin-top: 2em;
@@ -71,6 +84,8 @@
 
 /* HOW IT WORKS SECTION */
 #how-it-works {
+    padding: 1em 0;
+
     .container {
         display: grid;
         grid-template-columns: 1fr;
@@ -79,10 +94,10 @@
         .step-selection {
             display: flex;
             flex-direction: column;
-            background-color: rgb(44, 61, 77);
+            background-color: rgb(104, 135, 163);
             padding: 1.5em;
             border-radius: 5px;
-            // gap: 1em;
+            gap: .6em;
 
             button {
                 border: none;
@@ -92,16 +107,24 @@
                 font-weight: 500;
                 text-align: left;
                 border-radius: 5px;
+                transition: all .5s ease-in;
             }
 
             .cs-active {
                 background-color: aliceblue;
+                box-shadow: 0px 4px 10px 0px rgb(48, 47, 47);
+
             }
         }
 
         .step-display {
+            padding: 1em;
+            border-radius: 5px;
+            background-color: rgb(104, 143, 179);
+
             img {
                 width: 100%;
+                border-radius: 5px;
             }
         }
     }
@@ -109,15 +132,22 @@
 
 /* PORTFOLIO SECTION */
 #portfolio {
+    margin-bottom: 4em;
+    
     .container {
+
+        h2 {
+            margin-bottom: 2em;
+        }
+
         div {
             display: grid;
-            grid-template-columns: 1fr;
-            gap: 1em;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: .7em;
 
             img {
                 width: 100%;
             }
         }
-    } 
+    }
 }
