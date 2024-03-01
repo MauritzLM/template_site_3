@@ -12,8 +12,7 @@ script: ''
 
 ---
 
-{# hero section #}
-
+<!-- HERO SECTION -->
 <section id="hero">
 
 <div class="container">
@@ -23,22 +22,25 @@ script: ''
 {# tags* #}
 </section>
 
-{# Featured article #}
-<section>
+<!-- FEATURED POST -->
+<section id="featured-post">
    <div class="container">
        <h2>Featured</h2>
-       <article class="featured">
+       <article>
           {% include 'components/featured-post.html' %}
        </article>
    </div>
 </section>
 
-<section>
+<!-- RECENT POSTS -->
+<section id="recent-posts">
  <div class="container">
 
 {% if collections.post | length == 0 %}
     <h2>No current posts</h2>
 {% else %}
+   <h2>Latest</h2>
+   <div class="card-container">
    {%- for post in collections.post | reverse -%}
      <article>
       <picture>
@@ -50,18 +52,21 @@ script: ''
           <!-- Fallback image --> 
           <img src="{{ post.data.imgSrc }}" alt="{{ post.data.imgAlt }}" aria-hidden="true" decoding="async" width="" height="" loading=""> 
       </picture>
-       <h3>{{ post.data.title }}</h3>
 
-       <p>{{ post.data.description }}</p>
+      <div class="post-details">
 
-       <span>by {{ post.data.author }}</span>
-       <span class="blog-date">{{ post.date | postDate }}</span>
+          <h3>{{ post.data.title }}</h3>
+          <p>{{ post.data.description }}</p>
 
-       <a href="{{ post.url }}">Continue reading</a>
+          {# <p class="blog-date">by {{ post.data.author }} - {{ post.date | postDate }}</p> #}
+
+          <a href="{{ post.url }}">Continue reading</a>
+
+       </div>
      
      </article>
    {%- endfor -%}
-
+    </div>
 {% endif %}
 
   </div>
