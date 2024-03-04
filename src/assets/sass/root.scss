@@ -3,15 +3,26 @@
 /* VARIABLES */
 :root {
     /* colors */
-    --primary-500: rgb(28, 139, 204);
+    /* primary */
+    --primary-500: #c67639;
 
-    --grey-100: rgb(243, 241, 241);
-    --grey-500: grey;
-    --grey-900: black;
+    /* secondary */
+    --secondary-200:rgb(119, 203, 224);
+    --secondary-500: rgb(67, 137, 170);
+    --secondary-700: rgb(38, 60, 80);
+
+    /* greys */
+    --grey-100: rgb(248, 248, 248);
+    --grey-200: rgb(238, 238, 238);
+    --grey-300: rgb(194, 194, 194);
+    --grey-500: rgb(129, 129, 129);
+    --grey-700: rgb(99, 99, 99);
+    --grey-900: rgb(58, 56, 56);
 
     /* color variables  */
     --bodyTextColor: var(--grey-900);
     --bodyBackgroundColor: var(--grey-100);
+    --footerBackgroundColor: var(--grey-200);
 
     /* 13px - 16px */
     --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
@@ -51,11 +62,13 @@
 html[data-theme='light'] {
     --bodyTextColor: var(--grey-900);
     --bodyBackgroundColor: var(--grey-100);
+    --footerBackgroundColor: var(--grey-200);
 }
 
 html[data-theme='dark'] {
     --bodyTextColor: var(--grey-100);
     --bodyBackgroundColor: var(--grey-900);
+    --footerBackgroundColor: var(--grey-700);
 }
 
 /* GENERAL STYLES */
@@ -106,9 +119,9 @@ button {
 
 /* buttons */
 .cs-button {
-    background-color: var(--bodyTextColor);
-    color: var(--bodyBackgroundColor);
-    border-radius: 20px;
+    background-color: var(--primary-500);
+    color: var(--grey-100);
+    border-radius: 2px;
     padding: .6em 1.2em;
     font-weight: 500;
     display: inline-block;
@@ -204,7 +217,7 @@ section {
         width: 100%;
         height: 2px;
         border-radius: 2px;
-        background-color: #1a1a1a;
+        background-color: var(--bodyTextColor);
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
@@ -330,12 +343,17 @@ section {
         .cs-toggle {
             display: none;
         }
+
+        .toggle-container {
+            right: 10em;
+        }
     }
 }
 
 /*  CTA STYLES  */
 #cta {
-    background-color: #bba999;
+    background-color: var(--secondary-700);
+    color: var(--grey-100);
     text-align: center;
 
     .cs-button {
@@ -345,8 +363,8 @@ section {
 
 /*  FOOTER STYLES  */
 footer {
-    background-color: var(--grey-900);
-    color: var(--grey-100);
+    background-color: var(--footerBackgroundColor);
+    color: var(--bodyTextColor);
     padding: 2em 0;
 
     .container {

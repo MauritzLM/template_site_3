@@ -10,7 +10,7 @@
         gap: 1em;
 
         h1 {
-            color: rgb(218, 105, 124);
+            color: var(--bodyTextColor);
         }
 
         picture {
@@ -41,7 +41,8 @@
             justify-items: center;
 
             .value-card {
-                background-color: bisque;
+                background-color: var(--grey-200);
+                color: var(--grey-900);
                 padding: 1em;
                 border-radius: 5px;
                 width: 300px;
@@ -76,7 +77,8 @@
                 }
 
                 div {
-                    background-color: rgb(215, 224, 231);
+                    background-color: var(--grey-300);
+                    color: var(--grey-100);
                     padding: .5em 1.2em;
                     // text-align: center;
 
