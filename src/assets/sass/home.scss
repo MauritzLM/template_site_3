@@ -38,9 +38,22 @@
     }
 }
 
+/* tablet */
+@media screen and (min-width: 730px) {
+    #hero {
+        height: 78vh;
+        padding-top: 9em;
+
+        p {
+            // width: 70%;
+            font-size: 1.1rem;
+        }
+    }
+}
+
 /* SERVICES SECTION */
 #services {
-    background-color: var(--grey-500);
+    background-color: var(--grey-300);
     // color: var(--bodyBackgroundColor);
 
     .container {
@@ -49,14 +62,36 @@
         justify-content: center;
         align-items: center;
         gap: 1.5em;
+        // max-width: 1200px;
 
         .service-card {
             text-align: center;
             max-width: 320px;
-            background-color: var(--grey-100);
-            color: var(--grey-900);
+            background-color: var(--bodyBackgroundColor);
+            color: var(--bodyTextColor);
             padding: 2em;
             border-radius: 5px;
+
+            img {
+                background-color: var(--primary-500);
+                border-radius: 5px;
+                padding: .5em;
+            }
+        }
+    }
+}
+
+/* desktop */
+@media screen and (min-width: 1023px) {
+    #services {
+        padding: 4em 0;
+
+        .container {
+            flex-direction: row;
+            gap: 2em;
+            // .service-card {
+
+            // }
         }
     }
 }
@@ -68,7 +103,7 @@
 
     .container {
         picture {
-            width: 100%;
+            max-width: 600px;
 
             img {
                 width: 100%;
@@ -77,6 +112,8 @@
         }
 
         .cs-text {
+            max-width: 500px;
+
             p {
                 font-size: 1.2rem;
             }
@@ -88,14 +125,48 @@
     }
 }
 
+/* Desktop */
+@media screen and (min-width: 1023px) {
+    #about {
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 4em;
+
+            .cs-text {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                p {
+                    font-size: 1.8rem;
+                    margin-top: 0;
+                }
+
+                .cs-button {
+                    width: fit-content;
+                }
+            }
+        }
+    }
+}
+
 /* INFO DETAIL SECTION */
 #sbs {
     .container {
-        background-color: var(--grey-500);
+        background-color: var(--grey-200);
+        color: var(--grey-900);
         border-radius: 5px;
         padding: 2em 1em;
+        max-width: 1000px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2em;
 
         .cs-text {
+            max-width: 350px;
+
             h2 {
                 text-align: center;
             }
@@ -108,7 +179,6 @@
             justify-items: center;
             align-items: center;
             place-content: center;
-            margin-top: 2em;
 
             .info-detail {
                 // background-color: var(--grey-100);
@@ -125,6 +195,28 @@
     }
 }
 
+/* Desktop */
+@media screen and (min-width: 1023px) {
+    #sbs {
+        .container {
+            flex-direction: row;
+            //    gap: 2em;
+            align-items: center;
+            justify-content: center;
+
+            .cs-text {
+                // max-width: 400px;
+                text-align: center;
+            }
+
+            .info-container {
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+
 /* ADDITIONAL INFO SECTION */
 #sbs-r {
     padding-bottom: 2em;
@@ -133,16 +225,17 @@
 
         display: flex;
         flex-direction: column;
-        gap: 1em;
+        align-items: center;
+        gap: 2em;
 
         picture {
-            width: 100%;
+            max-width: 600px;
             order: -1;
 
             img {
                 width: 100%;
                 border-radius: 5px;
-                // display: none;
+
             }
         }
 
@@ -150,6 +243,7 @@
             display: flex;
             flex-direction: column;
             gap: 1em;
+            max-width: 500px;
 
             h2 {
                 text-align: center;
@@ -160,9 +254,32 @@
                 display: flex;
                 gap: 1em;
 
+                img {
+                    background-color: var(--grey-200);
+                    border-radius: 50%;
+                    position: relative;
+                    top: 5px;
+                }
+
                 p {
                     margin-top: 0;
                 }
+            }
+        }
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 1023px) {
+    #sbs-r {
+        .container {
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 4em;
+
+            picture {
+                order: 1;
             }
         }
     }
@@ -174,7 +291,10 @@
         display: grid;
         grid-template-columns: 1fr;
         justify-items: center;
-        gap: 2em;
+        align-items: center;
+        gap: 3em;
+        // max-width: 1200px;
+        // margin: auto;
 
         h2 {
             text-align: center;
@@ -186,20 +306,23 @@
             border-radius: 5px;
             width: 300px;
 
+
             .review-text {
-                background-color: var(--grey-500);
+                background-color: var(--grey-300);
                 font-size: 1.05rem;
                 padding: 1em;
                 width: 100%;
                 border-radius: 5px 5px 0 0;
+                color: var(--grey-900);
             }
 
             .review-client {
-                background-color: rgb(255, 255, 255);
+                background-color: var(--grey-100);
                 text-align: center;
                 width: 100%;
                 padding: 1em 0;
                 border-radius: 0 0 5px 5px;
+                color: var(--grey-900);
 
                 p {
                     margin: 0;
@@ -214,6 +337,43 @@
     }
 }
 
+/* Desktop */
+@media screen and (min-width: 1023px) {
+    #reviews {
+        .container {
+            grid-template-areas: "heading heading heading"
+                "review1 review2 review3";
+            grid-template-columns: 300px 300px 300px;
+            column-gap: 2em;
+            place-content: center;
+
+            h2 {
+                grid-area: heading;
+                // justify-self: center;
+            }
+
+            .review:nth-of-type(1) {
+                grid-area: review1;
+                
+            }
+
+            .review:nth-of-type(2) {
+                grid-area: review2;
+                position: relative;
+                top: 1em;
+            }
+
+            .review:nth-of-type(3) {
+                grid-area: review3;
+                position: relative;
+                top: 2em;
+                
+            }
+        }
+    }
+}
+
+/* RECENT ARTICLES SECTION */
 #recent-articles {
     padding-bottom: 7em;
 
@@ -237,14 +397,15 @@
                 display: block;
 
                 img {
-                    max-width: 100%;
+                    width: 100%;
                     height: 100%;
                     border-radius: 2px 2px 0 0;
                 }
             }
 
             .article-detail {
-                background-color: white;
+                background-color: var(--grey-200);
+                color: var(--grey-900);
                 border-radius: 0 0 2px 2px;
                 padding: 1.5em;
                 display: grid;
@@ -274,6 +435,7 @@
                     align-items: center;
                     gap: .2em;
                     transition: all .2s;
+                    color: var(--grey-900);
 
                     &:hover {
                         gap: .3em;
@@ -284,11 +446,35 @@
                         top: 1.4px;
                     }
                 }
-
-
             }
         }
+    }
+}
+/* Desktop */
+@media screen and (min-width: 1023px) {
+    #recent-articles {
+        .container {
+            grid-template-areas: "heading heading heading"
+                "article1 article2 article3";
+            grid-template-columns: 300px 300px 300px;
+            column-gap: 2em;
+            place-content: center;
+            
+            h2 {
+                grid-area: heading;
+            }
 
+            .article:nth-of-type(1) {
+                grid-area: article1;
+            }
 
+            .article:nth-of-type(2) {
+                grid-area: article2;
+            }
+
+            .article:nth-of-type(3) {
+                grid-area: article3;
+            }
+        }
     }
 }
