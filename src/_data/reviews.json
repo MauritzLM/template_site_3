@@ -1,17 +1,17 @@
 [
     {
         "text": "Augue ut lectus arcu bibendum at varius. Suscipit tellus mauris a diam maecenas sed enim ut. Quam nulla porttitor massa id neque. Ullamcorper malesuada proin libero nunc.",
-        "client_name": "Piet Wors",
-        "client_company": "Makro"
+        "client_name": "Client name",
+        "client_company": "Company"
     },
     {
         "text": "Augue ut lectus arcu bibendum at varius. Suscipit tellus mauris a diam maecenas sed enim ut. Quam nulla porttitor massa id neque. Ullamcorper malesuada proin libero nunc.",
-        "client_name": "Harry Potter",
-        "client_company": "Hogwarts"
+        "client_name": "Client name",
+        "client_company": "Company"
     },
     {
         "text": "'Augue ut lectus arcu bibendum at varius. Suscipit tellus mauris a diam maecenas sed enim ut. Quam nulla porttitor massa id neque. Ullamcorper malesuada proin libero nunc.'",
-        "client_name": "LT Shepard",
-        "client_company": "The Normandy"
+        "client_name": "Client name",
+        "client_company": "Company"
     }
 ]
