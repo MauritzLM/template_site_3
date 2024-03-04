@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
          scrollStart = e.target.scrollingElement.scrollTop;
          if (scrollStart > offset.top) {
           // change to correct color*
-             navigation.style.backgroundColor = "gray";
+             navigation.style.backgroundColor = "var(--grey-300)";
          } else {
              navigation.style.backgroundColor = "transparent";
          }
