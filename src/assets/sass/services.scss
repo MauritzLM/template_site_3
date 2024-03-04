@@ -9,8 +9,11 @@
         display: flex;
         flex-direction: column;
         gap: 1em;
+        max-width: 1300px;
 
         .cs-text {
+            max-width: 550px;
+            
             h1 {
                 color: var(--bodyTextColor);
                 margin-top: 0;
@@ -36,13 +39,35 @@
     }
 }
 
+/* Desktop */
+@media screen and (min-width: 1023px) {
+    #hero {
+        padding-top: 10em;
+
+        .container {
+            flex-direction: row;
+            justify-content: space-between;
+
+
+            .cs-text {
+                min-width: 370px;
+            }
+        }
+    }
+}
+
 /* PRICING SECTION */
 #pricing {
     // padding: 1em;
 
     .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 2em;
+
         h2 {
-            margin-bottom: 2em;
+            text-align: center;
         }
 
         .product-card {
@@ -76,8 +101,36 @@
 
             &:nth-of-type(2) {
                 background-color: var(--grey-500);
-                margin-top: 2em;
                 color: var(--grey-100);
+            }
+        }
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 1023px) {
+    #pricing {
+        .container {
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: "heading heading"
+                "card1 card2";
+            column-gap: 2.5em;
+            align-items: center;
+
+            h2 {
+                grid-area: heading;
+            }
+
+            .product-card {
+                &:nth-of-type(1) {
+                    grid-area: card1;
+                    justify-self: end;
+                }
+
+                &:nth-of-type(2) {
+                    grid-area: card2;
+                    justify-self: start;
+                }
             }
         }
     }
@@ -91,6 +144,11 @@
         display: grid;
         grid-template-columns: 1fr;
         gap: 1em;
+        max-width: 1300px;
+
+        h2 {
+          text-align: center;
+        }
 
         .step-selection {
             display: flex;
@@ -100,6 +158,8 @@
             border-radius: 5px;
             gap: .6em;
             color: var(--grey-900);
+            max-width: 400px;
+            height: fit-content;
 
             button {
                 border: none;
@@ -134,10 +194,34 @@
     }
 }
 
+/* Desktop */
+@media screen and (min-width: 1023px) {
+    #how-it-works {
+        .container {
+            grid-template-areas: "heading heading"
+            "selection display";
+            grid-template-columns: 1fr 2fr;
+    
+            h2 {
+                grid-area: heading;
+            }
+    
+            .step-selection {
+                grid-area: selection;
+            }
+    
+            .step-display {
+                grid-area: display;
+            }
+        }
+    }
+}
+
+
 /* PORTFOLIO SECTION */
 #portfolio {
     margin-bottom: 4em;
-    
+
     .container {
 
         h2 {

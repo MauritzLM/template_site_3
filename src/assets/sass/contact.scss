@@ -4,14 +4,25 @@
     padding-top: 7em;
 
     .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        // justify-items: center;
+        place-content: center;
+        gap: 4em;
+        max-width: 1300px;
+
+        .cs-text {
+            max-width: 450px;
+        }
+
         .contact-details {
             // padding: 1em;
             display: flex;
             flex-direction: column;
-    
+
             gap: 1em;
-            max-width: 400px;
-            margin: 4em auto;
+            max-width: 550px;
+            // margin: 4em auto;
 
             .item {
                 display: grid;
@@ -38,7 +49,9 @@
             display: flex;
             flex-direction: column;
             gap: 1.6em;
-            max-width: 500px;
+            max-width: 450px;
+            
+            border-radius: 10px;
 
             div {
                 display: flex;
@@ -68,6 +81,34 @@
                 padding: .6em 1.2em;
                 border-radius: 5px;
                 display: inline-block;
+            }
+        }
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 1023px) {
+    #hero {
+        padding-top: 10em;
+
+        .container {
+            grid-template-areas: "text form"
+            "contact-info form";
+            grid-template-columns: 1fr 1fr;
+            row-gap: 1em;
+
+            .cs-text {
+                grid-area: text;
+            }
+
+            .contact-details {
+                grid-area: contact-info;
+            }
+
+            form {
+                grid-area: form;
+                background-color: var(--grey-200);
+                padding: 2em;
             }
         }
     }
