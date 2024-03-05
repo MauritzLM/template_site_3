@@ -1,6 +1,6 @@
 ---
 title: Article 3
-description: Description of article 3
+description: Quam lacus suspendisse faucibus interdum posuere. Malesuada bibendum arcu vitae elementum curabitur. Urna duis convallis convallis tellus id. Risus at ultrices mi tempus imperdiet nulla.
 author: JRR Tolkien
 date: 2024-01-08T15:26:46.705Z
 imgSrc: /assets/images/article3.webp
