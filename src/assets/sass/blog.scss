@@ -10,6 +10,7 @@
         margin: 0;
     }
 }
+
 /* Desktop */
 @media screen and (min-width: 1023px) {
     #hero {
@@ -23,7 +24,6 @@
 /* FEATURED POST */
 #featured-post {
     padding-bottom: 0;
-
 
     .container {
         max-width: 1300px;
@@ -57,10 +57,11 @@
 
                 a {
                     font-weight: 500;
+                    font-size: 1.2rem;
                     transition: all .4s;
 
                     &:hover {
-                        font-size: 1.1rem;
+                        font-size: 1.25rem;
                     }
                 }
             }
@@ -100,15 +101,15 @@
 
         .card-container {
             display: grid;
-            grid-template-columns: 1fr;
+            grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
             gap: 2em;
             justify-items: center;
             margin-top: 2em;
 
             article {
-                display: flex;
-                flex-direction: column;
-                max-width: 400px;
+                // display: flex;
+                // flex-direction: column;
+                width: 330px;
                 padding: .5em;
                 background-color: var(--grey-200);
                 color: var(--grey-900);
@@ -116,11 +117,12 @@
 
                 picture {
                     width: 100%;
-                    // height: 180px;
+                    height: 180px;
+                    display: block;
 
                     img {
                         width: 100%;
-                        // height: 100%;
+                        height: 100%;
                     }
                 }
 
@@ -135,11 +137,12 @@
 
                     a {
                         font-weight: 500;
+                        font-size: 1.1rem;
                         transition: all .4s;
                         color: var(--grey-900);
 
                         &:hover {
-                            font-size: 1.05rem;
+                            color: var(--secondary-200);
                         }
                     }
                 }
@@ -161,6 +164,8 @@
 
 /* ARTICLE PAGE */
 #main-content {
+    padding-top: 7em;
+
     .container {
         article {
             max-width: 900px;
@@ -203,5 +208,11 @@
                 gap: .6em;
             }
         }
+    }
+}
+
+@media screen and (min-width: 1023px) {
+    #main-content {
+        padding-top: 10em;
     }
 }

@@ -12,7 +12,7 @@
         // align-items: center;
 
         .cs-text {
-            max-width: 550px;
+            max-width: 450px;
 
             h1 {
                 color: var(--bodyTextColor);
@@ -26,6 +26,7 @@
 
             img {
                 width: 100%;
+                border-radius: 5px;
             }
         }
     }
@@ -38,7 +39,7 @@
 
         .container {
             flex-direction: row;
-            gap: 2em;
+            justify-content: space-around;
 
             picture {
                 max-width: 700px;
@@ -67,12 +68,12 @@
             justify-items: center;
             max-width: 1300px;
             margin: auto;
-            background-color: var(--grey-200);
+            // background-color: var(--grey-200);
             padding: 2em 0;
             border-radius: 10px;
 
             .value-card {
-                background-color: var(--grey-100);
+                background-color: var(--primary-100);
                 color: var(--grey-900);
                 padding: 1em;
                 border-radius: 5px;
@@ -140,7 +141,7 @@
 
         .card-container {
             display: grid;
-            grid-template-columns: 1fr;
+            grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
             justify-items: center;
             gap: 2em;
 
@@ -154,8 +155,8 @@
                 }
 
                 div {
-                    background-color: var(--grey-300);
-                    color: var(--grey-100);
+                    background-color: var(--grey-200);
+                    color: var(--grey-900);
                     padding: .5em 1.2em;
                     // text-align: center;
 
@@ -169,12 +170,12 @@
 }
 
 /* Desktop */
-@media screen and (min-width: 1023px) {
-    #our-team {
-        .container {
-            .card-container {
-                grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
-            }
-        }
-    }
-}
+// @media screen and (min-width: 1023px) {
+//     #our-team {
+//         .container {
+//             .card-container {
+//                 grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+//             }
+//         }
+//     }
+// }

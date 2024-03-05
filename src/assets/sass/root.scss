@@ -4,10 +4,12 @@
 :root {
     /* colors */
     /* primary */
+    --primary-100: rgb(243, 187, 124);
     --primary-500: #c67639;
 
     /* secondary */
-    --secondary-200:rgb(119, 203, 224);
+    --secondary-100: rgb(195, 231, 240);
+    --secondary-200: rgb(119, 203, 224);
     --secondary-500: rgb(67, 137, 170);
     --secondary-700: rgb(38, 60, 80);
 
@@ -16,8 +18,8 @@
     --grey-200: rgb(238, 238, 238);
     --grey-300: rgb(194, 194, 194);
     --grey-500: rgb(129, 129, 129);
-    --grey-700: rgb(99, 99, 99);
-    --grey-900: rgb(58, 56, 56);
+    --grey-700: rgb(51, 47, 44);
+    --grey-900: rgb(37, 37, 37);
 
     /* color variables  */
     --bodyTextColor: var(--grey-900);
@@ -28,6 +30,7 @@
     --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
     /* 31px - 49px */
     --headerFontSize: clamp(1.9375rem, 4.2vw, 3.5rem);
+    --headingFontSize: clamp(1.6rem, 3vw, 2.4rem);
     --bodyFontSize: 1rem;
 
     /* 60px - 100px top and bottom */
@@ -67,8 +70,8 @@ html[data-theme='light'] {
 
 html[data-theme='dark'] {
     --bodyTextColor: var(--grey-100);
-    --bodyBackgroundColor: var(--grey-900);
-    --footerBackgroundColor: var(--grey-700);
+    --bodyBackgroundColor: var(--grey-700);
+    --footerBackgroundColor: var(--grey-900);
 }
 
 /* GENERAL STYLES */
@@ -93,6 +96,10 @@ body {
 h1 {
     font-size: var(--headerFontSize);
     font-weight: 900;
+}
+
+h2 {
+    font-size: var(--headingFontSize);
 }
 
 h1,
@@ -286,7 +293,9 @@ section {
                 width: 100%;
                 margin-right: 0;
 
-                
+                a {
+                    font-size: 1.2rem;
+                }
 
                 a:hover {
                     font-weight: 500;
@@ -318,8 +327,8 @@ section {
 /* desktop nav */
 @media screen and (min-width: 1023px) {
     #cs-navigation {
-        padding: 1.5em 2em;
-        grid-template-columns: 1fr 1.5fr;
+        padding: 1.8em 2em;
+        grid-template-columns: 1fr 1.7fr;
 
         .nav-ul-wrapper {
             position: static;
@@ -337,6 +346,12 @@ section {
                 height: 25px;
                 width: auto;
                 flex-direction: row;
+
+                li {
+                    a {
+                        font-size: 1rem;
+                    }
+                }
             }
         }
 
@@ -356,8 +371,45 @@ section {
     color: var(--grey-100);
     text-align: center;
 
+    // p {
+    //     font-size: 1.05rem;
+    // }
+
     .cs-button {
         margin-top: 1em;
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 1023px) {
+    #cta {
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: "heading text"
+                "heading button";
+            row-gap: 1em;
+
+            h2 {
+                grid-area: heading;
+                justify-self: center;
+                align-self: center;
+            }
+
+            p {
+                grid-area: text;
+                text-align: left;
+                font-size: 1.2rem;
+                width: 300px;
+            }
+
+            .cs-button {
+                grid-area: button;
+                width: fit-content;
+                height: fit-content;
+                margin: 0;
+            }
+        }
     }
 }
 
