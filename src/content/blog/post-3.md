@@ -7,7 +7,6 @@ imgSrc: /assets/images/article3.webp
 imgAlt: 'post-3 image'
 tags:
     - post
-    - recent
 ---
 
 ## Article 3
