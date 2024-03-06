@@ -1,13 +1,13 @@
 ---
 title: Test Post
 description: Testing cms
-author: Admin
+author: Mo
 date: 2024-03-05T11:43:00.000Z
+imageSrc: /assets/images/article1.webp
+imageAlt: article-4-image
 tags:
   - post
   - recent
-imageSrc: /assets/images/article1.webp
-imageAlt: article-4-image
 ---
 ## Test post
 
