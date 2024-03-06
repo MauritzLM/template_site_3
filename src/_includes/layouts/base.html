@@ -42,6 +42,7 @@
     <link rel="stylesheet" href="{{ stylesheet }}">
     <script defer src="/assets/js/nav.js"></script>
     <script defer src="/assets/js/dark.js"></script>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
     {# services page script #}
     {% if script != '' %}
@@ -81,5 +82,16 @@
     </main>
     {% include "components/footer.html" %}
 
+  <script>
+     if (window.netlifyIdentity) {
+       window.netlifyIdentity.on("init", (user) => {
+         if (!user) {
+           window.netlifyIdentity.on("login", () => {
+           document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+  </script>
   </body>
 </html>
