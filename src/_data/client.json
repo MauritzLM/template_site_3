@@ -1,14 +1,14 @@
 {
-	"name": "Code Stitch Web Designs",
-	"email": "help@codestitch.app",
+	"name": "template3 web page",
+	"email": "mauritz303@gmail.com",
 	"phoneForTel": "555-779-4407",
 	"phoneFormatted": "(555) 779-4407",
 	"address": {
 		"lineOne": "First Address Line",
 		"lineTwo": "Second Address Line",
-		"city": "Denver",
-		"state": "CO",
-		"zip": "80206",
+		"city": "Pretoria",
+		"province": "Gauteng",
+		"zip": "0181",
 		"mapLink": "https://goo.gl/maps/UAQn4vuGDiwv7DV39"
 	},
 	"domain": "www.codestitch.app"
