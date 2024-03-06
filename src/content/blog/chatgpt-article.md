@@ -5,7 +5,6 @@ author: Chatgpt
 date: 2024-03-06T09:03:23.332Z
 tags:
   - post
-  - recent
 image: /assets/images/blog/article1.webp
 imageAlt: article4-img
 ---
