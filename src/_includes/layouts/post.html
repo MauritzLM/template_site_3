@@ -4,8 +4,7 @@ stylesheet: /css/blog.css
 eleventyComputed:
     title: '{{ title }}'
     description: '{{ description }}'
-    preloadImg: '{{ image }}'
-    imgSrc: '{{ imgSrc }}' 
+    preloadImg: '{{ imageSrc }}' 
     permalink: '/blog/{{ title | slug }}/index.html'
 ---
 
@@ -24,8 +23,10 @@ eleventyComputed:
        <!--Article Info-->
          <div class="article-group">
              <picture>
-              <source srcset="{{ imgSrc }}"/>
-              <img src="{{ imgSrc }}"> 
+              <source media="(max-width: 600px)" srcset="{{ imgSrc }}"/>
+              <source media="(min-width: 601px)" srcset="{{ imgSrc }}"/>
+
+              <img src="{{ imgSrc }}" alt="{{ imgAlt }}" aria-hidden="true" height="" width="" decoding="async" loading="eager"/> 
             </picture>
 
             <h1>{{ title }}</h1>
