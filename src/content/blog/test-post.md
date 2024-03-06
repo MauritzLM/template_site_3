@@ -1,7 +1,7 @@
 ---
 title: Test Post
 description: Testing cms
-author: Me
+author: Admin
 date: 2024-03-05T11:43:00.000Z
 tags:
   - post
