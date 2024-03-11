@@ -2,7 +2,6 @@
 const navigation = document.querySelector("#cs-navigation");
 const menuToggle = document.querySelector(".cs-toggle");
 
-
 menuToggle.addEventListener("click", () => {
      menuToggle.classList.toggle("cs-active");
      navigation.classList.toggle("cs-active");
@@ -18,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
          scrollStart = e.target.scrollingElement.scrollTop;
          if (scrollStart > offset.top) {
           // change to correct color*
-             navigation.style.backgroundColor = "var(--grey-300)";
+             navigation.style.backgroundColor = "var(--bodyBackgroundColor)";
          } else {
              navigation.style.backgroundColor = "transparent";
          }

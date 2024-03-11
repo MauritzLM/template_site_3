@@ -26,11 +26,12 @@
     <link rel="manifest" href="/assets/favicons/site.webmanifest">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff"> #}
+    <link rel="icon" type="image/x-icon" href="/assets/svgs/construct.svg">
 
     <!-- Preloads -->
-    {# <link rel="preload" as="image" href="/assets/svgs/logo-white.svg">
-    <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/roboto-v29-latin-regular.woff2" crossorigin>
-    <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/roboto-v29-latin-700.woff2" crossorigin> #}
+    {# <link rel="preload" as="image" href="/assets/svgs/logo-white.svg"> #}
+    <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/lato-v24-latin-700.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/lato-v24-latin-900.woff2" crossorigin> 
 
     <!-- Preload an image - tag not rendered if preloadImg is blank to stop console errors -->
     {% if preloadImg != '' %}
@@ -42,7 +43,7 @@
     <link rel="stylesheet" href="{{ stylesheet }}">
     <script defer src="/assets/js/nav.js"></script>
     <script defer src="/assets/js/dark.js"></script>
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
     {# services page script #}
     {% if script != '' %}

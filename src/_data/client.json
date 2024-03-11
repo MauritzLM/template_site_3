@@ -1,5 +1,5 @@
 {
-	"name": "template3 web page",
+	"name": "template web page",
 	"email": "mauritz303@gmail.com",
 	"phoneForTel": "555-779-4407",
 	"phoneFormatted": "(555) 779-4407",
@@ -11,5 +11,5 @@
 		"zip": "0181",
 		"mapLink": "https://goo.gl/maps/UAQn4vuGDiwv7DV39"
 	},
-	"domain": "www.codestitch.app"
+	"domain": "www.domain.app"
 }
