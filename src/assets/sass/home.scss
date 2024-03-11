@@ -1,19 +1,19 @@
 /* STYLES FOR THE HOME PAGE */
 /* NAVIGATION */
-#cs-navigation {
-    .cs-box {
-        .cs-line {
-            background-color: var(--grey-100);
-        }
-    }
-}
+// #cs-navigation {
+//     .cs-box {
+//         .cs-line {
+//             background-color: var(--grey-100);
+//         }
+//     }
+// }
 
 /* HERO SECTION */
 #hero {
-    padding-top: 8em;
+    padding-top: 7em;
     position: relative;
     z-index: 1;
-    height: 50vh;
+    height: 70vh;
     color: var(--grey-100);
 
     h1 {
@@ -26,6 +26,8 @@
 
     .cs-button {
         margin-top: 2em;
+        // border-color: var(--grey-50);
+        // color: var(--grey-50);
     }
 
     picture {
@@ -50,11 +52,10 @@
 /* tablet */
 @media screen and (min-width: 1023px) {
     #hero {
-        height: 60vh;
-        padding-top: 9em;
+        height: 100vh;
+        padding-top: 10em;
 
         p {
-            // width: 70%;
             font-size: 1.1rem;
         }
     }
@@ -62,8 +63,14 @@
 
 /* SERVICES SECTION */
 #services {
-    background-color: var(--grey-300);
-    // color: var(--bodyBackgroundColor);
+    // background-color: var(--grey-700);
+
+    h2 {
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 2em;
+        // color: var(--grey-50);
+    }
 
     .container {
         display: flex;
@@ -71,18 +78,18 @@
         justify-content: center;
         align-items: center;
         gap: 1.5em;
-        // max-width: 1200px;
 
         .service-card {
             text-align: center;
             max-width: 320px;
-            background-color: var(--bodyBackgroundColor);
-            color: var(--bodyTextColor);
+            background-color: var(--secondary-600);
+            color: var(--grey-50);
             padding: 2em;
             border-radius: 5px;
 
             img {
-                background-color: var(--primary-500);
+                // background-color: var(--primary-500);
+                border: 1px solid var(--grey-50);
                 border-radius: 5px;
                 padding: .5em;
             }
@@ -95,12 +102,13 @@
     #services {
         padding: 4em 0;
 
+        h2 {
+            margin-bottom: 1.5em;
+        }
+
         .container {
             flex-direction: row;
             gap: 2em;
-            // .service-card {
-
-            // }
         }
     }
 }
@@ -165,8 +173,8 @@
 /* INFO DETAIL SECTION */
 #sbs {
     .container {
-        background-color: var(--grey-200);
-        color: var(--grey-900);
+        background-color: var(--secondary-700);
+        color: var(--grey-50);
         border-radius: 5px;
         padding: 2em 1em;
         max-width: 1000px;
@@ -192,7 +200,6 @@
             place-content: center;
 
             .info-detail {
-                // background-color: var(--grey-100);
                 padding: 1em;
                 width: 100%;
                 text-align: center;
@@ -211,7 +218,6 @@
     #sbs {
         .container {
             flex-direction: row;
-            //    gap: 2em;
             align-items: center;
             justify-content: space-around;
             gap: 0;
@@ -221,7 +227,6 @@
                     margin-top: 0;
                 }
 
-                // max-width: 400px;
                 text-align: center;
             }
 
@@ -235,8 +240,6 @@
 
 /* ADDITIONAL INFO SECTION */
 #sbs-r {
-    // padding-bottom: 2em;
-
     .container {
 
         display: flex;
@@ -305,7 +308,7 @@
 
 /*  REVIEWS  */
 #reviews {
-    background-color: var(--grey-200);
+    background-color: var(--grey-100);
 
     .container {
         display: grid;
@@ -313,14 +316,11 @@
         justify-items: center;
         align-items: center;
         gap: 3em;
-        // max-width: 1200px;
-        // margin: auto;
 
         h2 {
             text-align: center;
             margin-top: 0;
             color: var(--grey-900);
-            // margin-bottom: ;
         }
 
         .review {
@@ -329,16 +329,16 @@
 
 
             .review-text {
-                background-color: var(--secondary-100);
+                background-color: var(--secondary-700);
                 font-size: 1.05rem;
                 padding: 1em;
                 width: 100%;
                 border-radius: 5px 5px 0 0;
-                color: var(--grey-900);
+                color: var(--grey-50);
             }
 
             .review-client {
-                background-color: var(--grey-100);
+                background-color: var(--grey-200);
                 text-align: center;
                 width: 100%;
                 padding: 1em 0;
@@ -365,18 +365,15 @@
             grid-template-areas: "heading heading heading"
                 "review1 review2 review3";
             grid-template-columns: 300px 300px 300px;
-            // column-gap: 2em;
             place-content: center;
 
             h2 {
                 grid-area: heading;
                 margin-bottom: 0;
-                // justify-self: center;
             }
 
             .review:nth-of-type(1) {
                 grid-area: review1;
-
             }
 
             .review:nth-of-type(2) {
@@ -389,7 +386,6 @@
                 grid-area: review3;
                 position: relative;
                 top: 2em;
-
             }
         }
     }
@@ -407,7 +403,6 @@
 
         h2 {
             text-align: center;
-            // margin-bottom: 0;
         }
 
         .article {

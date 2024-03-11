@@ -16,13 +16,10 @@
         }
 
         .contact-details {
-            // padding: 1em;
             display: flex;
             flex-direction: column;
-
             gap: 1em;
             max-width: 550px;
-            // margin: 4em auto;
 
             .item {
                 display: grid;
@@ -50,8 +47,7 @@
             flex-direction: column;
             gap: 1.6em;
             min-width: 90%;
-            
-            
+
             border-radius: 10px;
 
             div {
@@ -61,7 +57,6 @@
 
                 label {
                     font-size: 1.1rem;
-                    // font-weight: 500;
                 }
 
                 input,
@@ -107,7 +102,7 @@
 
         .container {
             grid-template-areas: "text form"
-            "contact-info form";
+                "contact-info form";
             grid-template-columns: 1fr 1fr;
             row-gap: 1em;
 
@@ -117,7 +112,7 @@
 
             .contact-details {
                 grid-area: contact-info;
-                
+
                 .item {
                     gap: 1em;
                 }

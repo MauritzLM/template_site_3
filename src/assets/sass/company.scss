@@ -9,7 +9,6 @@
         flex-direction: column;
         gap: 1em;
         justify-content: center;
-        // align-items: center;
 
         .cs-text {
             max-width: 450px;
@@ -20,9 +19,7 @@
         }
 
         picture {
-            // max-width: 700px;
             display: block;
-            // order: -1;
 
             img {
                 width: 100%;
@@ -68,7 +65,6 @@
             justify-items: center;
             max-width: 1300px;
             margin: auto;
-            // background-color: var(--grey-200);
             padding: 2em 0;
             border-radius: 10px;
 
@@ -126,7 +122,6 @@
 }
 
 
-
 /* OUR TEAM SECTION */
 #our-team {
     padding-bottom: 7em;
@@ -158,24 +153,8 @@
                     background-color: var(--grey-200);
                     color: var(--grey-900);
                     padding: .5em 1.2em;
-                    // text-align: center;
-
-                    //  p {
-                    //      margin: 0;
-                    // }
                 }
             }
         }
     }
 }
-
-/* Desktop */
-// @media screen and (min-width: 1023px) {
-//     #our-team {
-//         .container {
-//             .card-container {
-//                 grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
-//             }
-//         }
-//     }
-// }
