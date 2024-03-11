@@ -1,5 +1,5 @@
 ---
-title: 'Template 3 Home'
+title: 'Home Page Title'
 description: 'Home page'
 preloadImg: ''
 permalink: '/'
@@ -20,13 +20,13 @@ script: ''
      
       <h1>{{ title }}</h1>
       <p>Lorem ipsum dolor sit amet, labore et dolore magna aliqua.</p>
-      <a class="cs-button">Get Started</a>
+      <a class="cs-button" href="/services">Get Started</a>
 
       <picture>
          <!-- Mobile image -->
-          <source media="(max-width: 600px)" srcset="/assets/images/home-hero.webp"/>
+          <source media="(max-width: 700px)" srcset="/assets/images/home-hero-m.webp"/>
          <!-- Desktop image --> 
-          <source media="(min-width: 601px)" srcset="/assets/images/home-hero.webp"/>
+          <source media="(min-width: 701px)" srcset="/assets/images/home-hero.webp"/>
          <!-- Fallback image -->
           <img src="/assets/images/home-hero.webp" alt="building" aria-hidden="true" decoding="async" width="1920" height="1200" loading="eager"/> 
       </picture>
@@ -38,8 +38,9 @@ script: ''
 {# Services section #}
 
 <section id="services">
+      <h2>Our services</h2>
      <div class="container">
-
+            
         <div class="service-card">
            <img src="/assets/svgs/architecture.svg" height="60" width="60" alt="architecture icon" aria-hidden="true" decoding="async" loading="lazy"/>
            <h3>Service</h3>
@@ -69,7 +70,7 @@ script: ''
 
     <picture>
           <!-- Mobile image -->
-          <source media="(max-width: 600px)" srcset="/assets/images/home-about.webp"/>
+          <source media="(max-width: 600px)" srcset="/assets/images/home-about-m.webp"/>
           <!-- Desktop image -->
           <source media="(min-width: 601px)" srcset="/assets/images/home-about.webp"/>
 
@@ -158,7 +159,7 @@ script: ''
 
    <picture>
           <!-- Mobile image -->
-          <source media="(max-width: 600px)" srcset="/assets/images/info.webp"/>
+          <source media="(max-width: 600px)" srcset="/assets/images/info-m.webp"/>
           <!-- Desktop image -->
           <source media="(min-width: 601px)" srcset="/assets/images/info.webp"/>
 
