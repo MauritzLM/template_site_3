@@ -104,8 +104,12 @@
             article {
                 width: 330px;
                 padding: .5em;
-                background-color: var(--grey-200);
-                color: var(--grey-900);
+                padding-bottom: 1.5em;
+                // background-color: var(--grey-200);
+                // color: var(--grey-900);
+                border: 1px solid var(--secondary-200);
+                border-radius: 5px;
+                position: relative;
 
                 picture {
                     width: 100%;
@@ -120,6 +124,7 @@
 
                 .post-details {
                     padding: 0 1em 1em 1em;
+                    
 
                     h3 {
                         font-size: 1.4rem;
@@ -129,7 +134,10 @@
                         font-weight: 500;
                         font-size: 1.1rem;
                         transition: all .4s;
-                        color: var(--grey-900);
+                        // color: var(--grey-900);
+                        position: absolute;
+                        bottom: 15px;
+                        left: 20px;
 
                         &:hover {
                             color: var(--secondary-500);

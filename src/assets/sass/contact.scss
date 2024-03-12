@@ -64,19 +64,24 @@
                     padding: .5em;
                     font: inherit;
                     border-radius: 5px;
-                    border: 1px solid rgb(221, 217, 217);
+                    border: 1px solid var(--secondary-200);
                 }
             }
 
             button {
                 font: inherit;
                 font-weight: 500;
-                background-color: var(--bodyTextColor);
-                color: var(--bodyBackgroundColor);
-                border: none;
+                background-color: var(--bodyBackgroundColor);
+                // color: var(--grey-50);
+                border: 1px solid var(--primary-700);
                 padding: .6em 1.2em;
                 border-radius: 5px;
                 display: inline-block;
+
+                &:hover {
+                    background-color: var(--primary-500);
+                    color: var(--secondary-700);
+                }
             }
         }
     }
@@ -120,14 +125,14 @@
 
             form {
                 grid-area: form;
-                background-color: var(--grey-500);
+                border: 1px solid var(--secondary-500);
                 padding: 2em;
 
-                div {
-                    label {
-                        color: var(--grey-100);
-                    }
-                }
+                // div {
+                //     label {
+                //         color: var(--grey-100);
+                //     }
+                // }
             }
         }
     }
