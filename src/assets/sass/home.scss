@@ -10,10 +10,10 @@
 
 /* HERO SECTION */
 #hero {
-    padding-top: 7em;
+    padding-top: 8em;
     position: relative;
     z-index: 1;
-    height: 70vh;
+    height: 60vh;
     color: var(--grey-100);
 
     h1 {
@@ -26,8 +26,17 @@
 
     .cs-button {
         margin-top: 2em;
-        // border-color: var(--grey-50);
-        // color: var(--grey-50);
+        border: 1px solid;
+        border-color: var(--primary-500);
+        color: var(--grey-50);
+        background-color: transparent;
+        padding: .8em 2em;
+        transition: all .7s;
+
+        &:hover {
+            background-color: var(--primary-500);
+            color: var(--secondary-700);
+        }
     }
 
     picture {
@@ -52,8 +61,8 @@
 /* tablet */
 @media screen and (min-width: 1023px) {
     #hero {
-        height: 100vh;
-        padding-top: 10em;
+        height: 90vh;
+        padding-top: 15em;
 
         p {
             font-size: 1.1rem;
@@ -82,14 +91,14 @@
         .service-card {
             text-align: center;
             max-width: 320px;
-            background-color: var(--secondary-600);
-            color: var(--grey-50);
-            padding: 2em;
+            // background-color: var(--secondary-600);
+            padding: 1.5em;
             border-radius: 5px;
+            border: 1px solid var(--secondary-200);
 
             img {
                 // background-color: var(--primary-500);
-                border: 1px solid var(--grey-50);
+                border: 1px solid var(--grey-300);
                 border-radius: 5px;
                 padding: .5em;
             }
@@ -109,9 +118,24 @@
         .container {
             flex-direction: row;
             gap: 2em;
+
+            .service-card {
+                h3 {
+                    font-size: 1.3rem;
+                }
+            }
         }
     }
 }
+
+/* larger screens */
+// @media screen and (min-width: 1299px) {
+//     #services {
+//         .container {
+//             gap: 4em;
+//         }
+//     }
+// }
 
 
 /* ABOUT SECTION */
@@ -137,6 +161,14 @@
 
             .cs-button {
                 margin: 1em 0;
+                background-color: transparent;
+                border: 1px solid var(--primary-500);
+                color: var(--bodyTextColor);
+
+                &:hover {
+                    background-color: var(--primary-500);
+                    color: var(--secondary-700);
+                }
             }
         }
     }
@@ -155,7 +187,6 @@
             .cs-text {
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
 
                 p {
                     font-size: 1.8rem;
@@ -172,9 +203,13 @@
 
 /* INFO DETAIL SECTION */
 #sbs {
+    background-color: var(--grey-200);
+    // border-top: 1px solid;
+    // border-bottom: 1px solid;
+    // border-color: var(--secondary-200);
+    // box-shadow: 0px 4px 10px 0px var(--grey-200);
+
     .container {
-        background-color: var(--secondary-700);
-        color: var(--grey-50);
         border-radius: 5px;
         padding: 2em 1em;
         max-width: 1000px;
@@ -185,6 +220,7 @@
 
         .cs-text {
             max-width: 350px;
+            color: var(--grey-900);
 
             h2 {
                 text-align: center;
@@ -194,19 +230,27 @@
         .info-container {
             display: grid;
             grid-template-columns: 100px 100px;
-            gap: 2em 4em;
+            gap: 2em;
             justify-items: center;
             align-items: center;
             place-content: center;
+            padding: 2em 5em;
+            // border: 1px solid var(--secondary-200);
+            border-radius: 5px;
+            // background-color: var(--grey-100);
 
             .info-detail {
-                padding: 1em;
+                // padding: 1em;
                 width: 100%;
                 text-align: center;
+                // background-color: var(--secondary-700);
+                border-radius: 5px;
+                // border: 1px solid var(--primary-500);
+                color: var(--secondary-500);
 
                 h3 {
                     margin-top: 0;
-                    font-size: 1.5rem;
+                    font-size: 2rem;
                 }
             }
         }
@@ -219,7 +263,7 @@
         .container {
             flex-direction: row;
             align-items: center;
-            justify-content: space-around;
+            justify-content: space-between;
             gap: 0;
 
             .cs-text {
@@ -271,10 +315,11 @@
 
             .info-item {
                 display: flex;
-                gap: 1em;
+                gap: 1.5em;
 
                 img {
-                    background-color: var(--grey-200);
+                    // background-color: var(--grey-200);
+                    border: 1px solid var(--secondary-200);
                     border-radius: 50%;
                     position: relative;
                     top: 5px;
@@ -302,13 +347,38 @@
             picture {
                 order: 1;
             }
+
+            .cs-text {
+                align-self: start;
+
+                h2 {
+                    margin-top: 0;
+                }
+
+                .info-item {
+                    gap: 2em;
+                }
+
+                p {
+                    font-size: 1.1rem;
+                }
+            }
+        }
+    }
+}
+
+/* Larger screens */
+@media screen and (min-width: 1299px) {
+    #sbs-r {
+        .container {
+            gap: 6em;
         }
     }
 }
 
 /*  REVIEWS  */
 #reviews {
-    background-color: var(--grey-100);
+    // background-color: var(--grey-100);
 
     .container {
         display: grid;
@@ -320,7 +390,7 @@
         h2 {
             text-align: center;
             margin-top: 0;
-            color: var(--grey-900);
+            // color: var(--grey-900);
         }
 
         .review {
@@ -329,21 +399,22 @@
 
 
             .review-text {
-                background-color: var(--secondary-700);
+                // background-color: var(--secondary-700);
+                border: 1px solid var(--secondary-200);
                 font-size: 1.05rem;
                 padding: 1em;
                 width: 100%;
                 border-radius: 5px 5px 0 0;
-                color: var(--grey-50);
+                // color: var(--grey-50);
             }
 
             .review-client {
-                background-color: var(--grey-200);
+                background-color: var(--bodyTextColor);
                 text-align: center;
                 width: 100%;
                 padding: 1em 0;
                 border-radius: 0 0 5px 5px;
-                color: var(--grey-900);
+                color: var(--bodyBackgroundColor);
 
                 p {
                     margin: 0;
@@ -391,6 +462,15 @@
     }
 }
 
+/* Larger screens */
+@media screen and (min-width: 1299px) {
+    #reviews {
+        .container {
+            gap: 4em;
+        }
+    }
+}
+
 /* RECENT ARTICLES SECTION */
 #recent-articles {
     padding-bottom: 7em;
@@ -407,6 +487,7 @@
 
         .article {
             width: 300px;
+            box-shadow: 0px 4px 10px 0px var(--boxShadowColor);
 
             picture {
                 height: 180px;
@@ -421,8 +502,9 @@
             }
 
             .article-detail {
-                background-color: var(--grey-200);
-                color: var(--grey-900);
+                // background-color: var(--grey-100);
+                // color: var(--secondary-700);
+                // border: 1px solid var(--grey-200);
                 border-radius: 0 0 2px 2px;
                 padding: 1.5em;
                 display: grid;
@@ -452,7 +534,7 @@
                     align-items: center;
                     gap: .2em;
                     transition: all .2s;
-                    color: var(--grey-900);
+                    // color: var(--secondary-700);
 
                     &:hover {
                         gap: .3em;
@@ -493,6 +575,15 @@
             .article:nth-of-type(3) {
                 grid-area: article3;
             }
+        }
+    }
+}
+
+/* larger screens */
+@media screen and (min-width: 1299px) {
+    #recent-articles {
+        .container {
+            gap: 4em;
         }
     }
 }
