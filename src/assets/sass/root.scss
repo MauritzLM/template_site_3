@@ -4,13 +4,13 @@
 :root {
     /* colors */
     /* primary */
-    --primary-100: rgb(243, 187, 124);
+    --primary-100: rgb(255, 251, 222);
     --primary-200: #fff9a9;
     --primary-500: #ffe37b;
     --primary-700: #fdd852;
 
     /* secondary */
-    --secondary-100: rgb(195, 231, 240);
+    --secondary-100: rgb(229, 250, 255);
     --secondary-200: rgb(114, 146, 165);
     --secondary-500: rgb(67, 137, 170);
     --secondary-600: rgb(31, 57, 73);
@@ -77,8 +77,8 @@ html[data-theme='light'] {
 html[data-theme='dark'] {
     --bodyTextColor: var(--grey-50);
     --bodyBackgroundColor: var(--grey-900);
-    --footerBackgroundColor: var(--grey-700);
-    --boxShadowColor: var(--grey-700);
+    --footerBackgroundColor: var(--grey-900);
+    --boxShadowColor: var(--grey-900);
 }
 
 /* GENERAL STYLES */
@@ -139,7 +139,6 @@ button {
     padding: .6em 1.2em;
     font-weight: 500;
     display: inline-block;
-    // border: 1px solid var(--primary-200);
 }
 
 /* Hidden Screen reader skip nav button */
@@ -308,7 +307,7 @@ section {
                 }
 
                 .cs-active {
-                    border-bottom: 1px solid var(--primary-500);
+                    border-bottom: 2px solid var(--primary-500);
                     font-weight: 500;
                 }
 
@@ -379,7 +378,7 @@ section {
     .cs-button {
         margin-top: 1em;
         background-color: transparent;
-        border: 1px solid var(--primary-500);
+        border: 2px solid var(--primary-500);
         color: var(--grey-50);
 
         &:hover {
@@ -434,7 +433,6 @@ footer {
         gap: 1.5em;
 
         .company-info {
-            // border-bottom: 1px solid;
             text-align: center;
             padding-bottom: 2em;
         }

@@ -1,12 +1,4 @@
 /* STYLES FOR THE HOME PAGE */
-/* NAVIGATION */
-// #cs-navigation {
-//     .cs-box {
-//         .cs-line {
-//             background-color: var(--grey-100);
-//         }
-//     }
-// }
 
 /* HERO SECTION */
 #hero {
@@ -26,7 +18,7 @@
 
     .cs-button {
         margin-top: 2em;
-        border: 1px solid;
+        border: 2px solid;
         border-color: var(--primary-500);
         color: var(--grey-50);
         background-color: transparent;
@@ -72,13 +64,11 @@
 
 /* SERVICES SECTION */
 #services {
-    // background-color: var(--grey-700);
 
     h2 {
         text-align: center;
         margin-top: 0;
         margin-bottom: 2em;
-        // color: var(--grey-50);
     }
 
     .container {
@@ -91,13 +81,11 @@
         .service-card {
             text-align: center;
             max-width: 320px;
-            // background-color: var(--secondary-600);
             padding: 1.5em;
             border-radius: 5px;
-            border: 1px solid var(--secondary-200);
+            border: 2px solid var(--grey-200);
 
             img {
-                // background-color: var(--primary-500);
                 border: 1px solid var(--grey-300);
                 border-radius: 5px;
                 padding: .5em;
@@ -128,15 +116,6 @@
     }
 }
 
-/* larger screens */
-// @media screen and (min-width: 1299px) {
-//     #services {
-//         .container {
-//             gap: 4em;
-//         }
-//     }
-// }
-
 
 /* ABOUT SECTION */
 #about {
@@ -162,7 +141,7 @@
             .cs-button {
                 margin: 1em 0;
                 background-color: transparent;
-                border: 1px solid var(--primary-500);
+                border: 2px solid var(--primary-500);
                 color: var(--bodyTextColor);
 
                 &:hover {
@@ -203,11 +182,6 @@
 
 /* INFO DETAIL SECTION */
 #sbs {
-    background-color: var(--grey-200);
-    // border-top: 1px solid;
-    // border-bottom: 1px solid;
-    // border-color: var(--secondary-200);
-    // box-shadow: 0px 4px 10px 0px var(--grey-200);
 
     .container {
         border-radius: 5px;
@@ -217,10 +191,11 @@
         flex-direction: column;
         align-items: center;
         gap: 2em;
+        border: 2px solid var(--grey-200);
+        border-radius: 10px;
 
         .cs-text {
             max-width: 350px;
-            color: var(--grey-900);
 
             h2 {
                 text-align: center;
@@ -235,17 +210,12 @@
             align-items: center;
             place-content: center;
             padding: 2em 5em;
-            // border: 1px solid var(--secondary-200);
             border-radius: 5px;
-            // background-color: var(--grey-100);
 
             .info-detail {
-                // padding: 1em;
                 width: 100%;
                 text-align: center;
-                // background-color: var(--secondary-700);
                 border-radius: 5px;
-                // border: 1px solid var(--primary-500);
                 color: var(--secondary-500);
 
                 h3 {
@@ -263,7 +233,7 @@
         .container {
             flex-direction: row;
             align-items: center;
-            justify-content: space-between;
+            justify-content: space-around;
             gap: 0;
 
             .cs-text {
@@ -318,7 +288,6 @@
                 gap: 1.5em;
 
                 img {
-                    // background-color: var(--grey-200);
                     border: 1px solid var(--secondary-200);
                     border-radius: 50%;
                     position: relative;
@@ -378,7 +347,6 @@
 
 /*  REVIEWS  */
 #reviews {
-    // background-color: var(--grey-100);
 
     .container {
         display: grid;
@@ -390,7 +358,6 @@
         h2 {
             text-align: center;
             margin-top: 0;
-            // color: var(--grey-900);
         }
 
         .review {
@@ -399,13 +366,12 @@
 
 
             .review-text {
-                // background-color: var(--secondary-700);
-                border: 1px solid var(--secondary-200);
+                border: 2px solid var(--grey-200);
+                border-bottom: none;
                 font-size: 1.05rem;
                 padding: 1em;
                 width: 100%;
                 border-radius: 5px 5px 0 0;
-                // color: var(--grey-50);
             }
 
             .review-client {
@@ -502,9 +468,6 @@
             }
 
             .article-detail {
-                // background-color: var(--grey-100);
-                // color: var(--secondary-700);
-                // border: 1px solid var(--grey-200);
                 border-radius: 0 0 2px 2px;
                 padding: 1.5em;
                 display: grid;
@@ -534,7 +497,6 @@
                     align-items: center;
                     gap: .2em;
                     transition: all .2s;
-                    // color: var(--secondary-700);
 
                     &:hover {
                         gap: .3em;
