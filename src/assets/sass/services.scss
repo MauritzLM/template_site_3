@@ -101,15 +101,16 @@
                 width: 100%;
                 text-align: center;
                 margin-top: 1em;
+                background-color: var(--primary-300);
             }
 
             &:nth-of-type(1) {
-                background-color: var(--grey-200);
+                background-color: var(--grey-300);
                 color: var(--grey-900);
             }
 
             &:nth-of-type(2) {
-                background-color: var(--secondary-700);
+                background-color: var(--secondary-800);
                 color: var(--grey-100);
             }
         }
@@ -166,8 +167,6 @@
         .step-selection {
             display: flex;
             flex-direction: column;
-            border: 2px solid var(--grey-100);
-            padding: 1.5em;
             border-radius: 5px;
             gap: .6em;
             color: var(--grey-900);
@@ -176,7 +175,7 @@
 
             button {
                 border: none;
-                background-color: var(--secondary-600);
+                background-color: var(--secondary-500);
                 padding: 1em;
                 font: inherit;
                 font-size: 1.2rem;
@@ -188,16 +187,14 @@
             }
 
             .cs-active {
-                background-color: var(--primary-500);
-                color: var(--secondary-700);
+                background-color: var(--primary-300);
+                color: var(--secondary-900);
                 box-shadow: 0px 4px 10px 0px var(--boxShadowColor);
             }
         }
 
         .step-display {
-            padding: 1em;
             border-radius: 5px;
-             border: 2px solid var(--grey-100);
 
             img {
                 width: 100%;
@@ -227,7 +224,6 @@
 
             .step-display {
                 grid-area: display;
-                padding: 2em;
 
                 p {
                     font-size: 1.1rem;
