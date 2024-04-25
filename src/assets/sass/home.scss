@@ -19,15 +19,15 @@
     .cs-button {
         margin-top: 2em;
         border: 2px solid;
-        border-color: var(--primary-500);
+        border-color: var(--primary-600);
         color: var(--grey-50);
         background-color: transparent;
         padding: .8em 2em;
         transition: all .7s;
 
         &:hover {
-            background-color: var(--primary-500);
-            color: var(--secondary-700);
+            background-color: var(--primary-600);
+            color: var(--secondary-900);
         }
     }
 
@@ -86,9 +86,7 @@
             border: 2px solid var(--grey-200);
 
             img {
-                border: 1px solid var(--grey-300);
                 border-radius: 5px;
-                padding: .5em;
             }
         }
     }
@@ -141,12 +139,12 @@
             .cs-button {
                 margin: 1em 0;
                 background-color: transparent;
-                border: 2px solid var(--primary-500);
+                border: 2px solid var(--primary-600);
                 color: var(--bodyTextColor);
 
                 &:hover {
-                    background-color: var(--primary-500);
-                    color: var(--secondary-700);
+                    background-color: var(--primary-600);
+                    color: var(--secondary-900);
                 }
             }
         }
@@ -182,6 +180,7 @@
 
 /* INFO DETAIL SECTION */
 #sbs {
+    background-color: var(--sectionBackgroundColor);
 
     .container {
         border-radius: 5px;
@@ -191,9 +190,7 @@
         flex-direction: column;
         align-items: center;
         gap: 2em;
-        border: 2px solid var(--grey-200);
-        border-radius: 10px;
-
+    
         .cs-text {
             max-width: 350px;
 
@@ -216,7 +213,6 @@
                 width: 100%;
                 text-align: center;
                 border-radius: 5px;
-                color: var(--secondary-500);
 
                 h3 {
                     margin-top: 0;
@@ -305,7 +301,7 @@
 /* Desktop */
 @media screen and (min-width: 1023px) {
     #sbs-r {
-        padding-bottom: 10em;
+        padding: 10em 0;
 
         .container {
             flex-direction: row;
@@ -375,7 +371,7 @@
             }
 
             .review-client {
-                background-color: var(--bodyTextColor);
+                background-color: var(--surfaceColor);
                 text-align: center;
                 width: 100%;
                 padding: 1em 0;
