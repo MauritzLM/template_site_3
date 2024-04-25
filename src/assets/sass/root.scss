@@ -4,32 +4,48 @@
 :root {
     /* colors */
     /* primary */
-    --primary-100: rgb(255, 251, 222);
-    --primary-200: #fff9a9;
-    --primary-500: #ffe37b;
-    --primary-700: #fdd852;
+    --primary-100: #FFF9C4;
+    --primary-200: #FFF59D;
+    --primary-300: #FFF176;
+    --primary-400: #FFEE58;
+    --primary-500: #FFEB3B;
+    --primary-600: #FDD835;
+    --primary-700: #FBC02D;
 
     /* secondary */
-    --secondary-100: rgb(229, 250, 255);
-    --secondary-200: rgb(114, 146, 165);
-    --secondary-500: rgb(67, 137, 170);
-    --secondary-600: rgb(31, 57, 73);
-    --secondary-700: rgb(47, 60, 68);
+    --secondary-50: #ECEFF1;
+    --secondary-100: #CFD8DC;
+    --secondary-200: #B0BEC5;
+    --secondary-300: #90A4AE;
+    --secondary-400: #78909C;
+    --secondary-500: #607D8B;
+    --secondary-600: #546E7A;
+    --secondary-700: #455A64;
+    --secondary-800: #37474F;
+    --secondary-900: #263238;
+
+    /* blue */
+    --blue-500: #1565C0;
 
     /* greys */
-    --grey-50: rgb(252, 252, 252);
-    --grey-100: rgb(243, 243, 243);
-    --grey-200: rgb(238, 238, 238);
-    --grey-300: rgb(194, 194, 194);
-    --grey-500: rgb(129, 129, 129);
-    --grey-700: rgb(50, 50, 51);
-    --grey-900: rgb(30, 30, 30);
+    --grey-50: #FAFAFA;
+    --grey-100: #F5F5F5;
+    --grey-200: #EEEEEE;
+    --grey-300: #E0E0E0;
+    --grey-400: #BDBDBD;
+    --grey-500: #9E9E9E;
+    --grey-600: #757575;
+    --grey-700: #616161;
+    --grey-800: #424242;
+    --grey-900: #212121;
 
     /* color variables  */
     --bodyTextColor: var(--grey-900);
     --bodyBackgroundColor: var(--grey-50);
     --footerBackgroundColor: var(--grey-100);
-    --boxShadowColor: var(--grey-100);
+    --boxShadowColor: var(--grey-200);
+    --sectionBackgroundColor: var(--secondary-50);
+    --surfaceColor: var(--secondary-600);
 
     /* 13px - 16px */
     --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
@@ -68,17 +84,21 @@
 
 /* DARK MODE STYLES */
 html[data-theme='light'] {
-    --bodyTextColor: var(--secondary-700);
+    --bodyTextColor: var(--secondary-900);
     --bodyBackgroundColor: var(--grey-50);
     --footerBackgroundColor: var(--grey-100);
-    --boxShadowColor: var(--grey-100);
+    --boxShadowColor: var(--grey-300);
+    --sectionBackgroundColor: var(--secondary-50);
+    --surfaceColor: var(--secondary-600);
 }
 
 html[data-theme='dark'] {
     --bodyTextColor: var(--grey-50);
-    --bodyBackgroundColor: var(--grey-900);
+    --bodyBackgroundColor: var(--secondary-900);
     --footerBackgroundColor: var(--grey-900);
     --boxShadowColor: var(--grey-900);
+    --sectionBackgroundColor: var(--secondary-800);
+    --surfaceColor: var(--grey-100);
 }
 
 /* GENERAL STYLES */
@@ -133,8 +153,8 @@ button {
 
 /* buttons */
 .cs-button {
-    background-color: var(--primary-500);
-    color: var(--grey-900);
+    background-color: var(--primary-600);
+    color: var(--secondary-900);
     border-radius: 2px;
     padding: .6em 1.2em;
     font-weight: 500;
@@ -230,7 +250,7 @@ section {
         width: 100%;
         height: 2px;
         border-radius: 2px;
-        background-color: var(--primary-500);
+        background-color: var(--primary-600);
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
@@ -307,7 +327,7 @@ section {
                 }
 
                 .cs-active {
-                    border-bottom: 2px solid var(--primary-500);
+                    border-bottom: 2px solid var(--primary-600);
                     font-weight: 500;
                 }
 
@@ -378,12 +398,12 @@ section {
     .cs-button {
         margin-top: 1em;
         background-color: transparent;
-        border: 2px solid var(--primary-500);
+        border: 2px solid var(--primary-600);
         color: var(--grey-50);
 
         &:hover {
-            background-color: var(--primary-500);
-            color: var(--secondary-700);
+            background-color: var(--primary-600);
+            color: var(--secondary-900);
         }
     }
 }
@@ -463,7 +483,7 @@ footer {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: .6em;
+            gap: .8em;
             justify-self: start;
         }
     }
