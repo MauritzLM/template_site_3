@@ -57,10 +57,9 @@
                 a {
                     font-weight: 500;
                     font-size: 1.2rem;
-                    transition: all .4s;
 
                     &:hover {
-                        color: var(--secondary-500);
+                        color: var(--blue-500);
                     }
                 }
             }
@@ -132,13 +131,12 @@
                     a {
                         font-weight: 500;
                         font-size: 1.1rem;
-                        transition: all .4s;
                         position: absolute;
                         bottom: 15px;
                         left: 20px;
 
                         &:hover {
-                            color: var(--secondary-500);
+                            color: var(--blue-500);
                         }
                     }
                 }
