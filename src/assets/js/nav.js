@@ -7,6 +7,7 @@ menuToggle.addEventListener("click", () => {
      navigation.classList.toggle("cs-active");
 });
 
+
 // nav scroll styles
 // change color when scrolling (transparent when at the top)
 document.addEventListener("DOMContentLoaded", function () {
@@ -16,7 +17,6 @@ document.addEventListener("DOMContentLoaded", function () {
      document.onscroll = function (e) {
          scrollStart = e.target.scrollingElement.scrollTop;
          if (scrollStart > offset.top) {
-          // change to correct color*
              navigation.style.backgroundColor = "var(--bodyBackgroundColor)";
          } else {
              navigation.style.backgroundColor = "transparent";
