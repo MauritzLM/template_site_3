@@ -118,6 +118,9 @@ body {
     color: var(--bodyTextColor);
     background-color: var(--bodyBackgroundColor);
     margin: 0;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 h1 {
